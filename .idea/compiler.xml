@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-task" />
         <module name="springboot-websocket" />
+        <module name="springbootrabbitmq" />
         <module name="springbootswagger2" />
         <module name="springboottask" />
         <module name="springbootwebsocket" />

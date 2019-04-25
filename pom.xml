@@ -12,6 +12,7 @@
         <module>springboot-websocket</module>
         <module>springboot-task</module>
         <module>springboot-swagger2</module>
+        <module>springboot-rabbitmq</module>
     </modules>
 
     <parent>
