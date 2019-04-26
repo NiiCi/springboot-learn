@@ -1,6 +1,6 @@
 # 0.安装文件准备
 
-首先将安装包上传到 `/home/leyou/rabbit`目录：
+首先将安装包上传到 `/home/rabbit`目录：
 
  ![1527066205405](assets/1527066205405.png)
 
@@ -14,11 +14,22 @@
 
 我们并没有提供Erlang安装包，直接采用yum仓库安装：
 
-```
-yum install esl-erlang_17.3-1~centos~6_amd64.rpm
-yum install esl-erlang-compat-R14B-1.el6.noarch.rpm
-```
+rabbitmq 相关安装包下载地址: 
+````
+wget https://www.rabbitmq.com/releases/
+````
 
+下载 erlang 安装包: 
+````
+wget http://www.rabbitmq.com/releases/erlang/erlang-18.3.1.el7.centos.x86_64.rpm
+````
+安装 erlang:
+````
+rpm -ivh erlang-18.3.1.el7.centos.x86_64.rpm
+````
+安装完成后执行 erl 命令,出现下图则表示成功
+
+![](assets/安装erlang成功图片.png)
 
 
 # 2.安装RabbitMQ
@@ -28,7 +39,7 @@ yum install esl-erlang-compat-R14B-1.el6.noarch.rpm
 进入文件所在目录:
 
 ```sh
-cd /home/leyou/rabbit
+cd /home/rabbit
 ```
 
 然后输入命令：
@@ -36,6 +47,7 @@ cd /home/leyou/rabbit
 ```sh
  rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm
 ```
+
 
 
 

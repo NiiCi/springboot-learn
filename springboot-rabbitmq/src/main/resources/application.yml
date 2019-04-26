@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    host: 148.70.3.235
+    username: niici
+    password: niici
+    virtual-host: /niici-host
