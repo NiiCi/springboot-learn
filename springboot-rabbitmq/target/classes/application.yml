@@ -16,8 +16,3 @@ spring:
           multiplier: 2
     #生产者确认机制，确保消息会正确发送，如果发送失败会有错误回执，从而触发重试
     publisher-confirms: true
-    listener:
-      direct:
-        acknowledge-mode: manual
-      simple:
-        acknowledge-mode: manual
