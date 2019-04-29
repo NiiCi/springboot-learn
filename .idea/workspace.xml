@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot-elasticsearch/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/EasyPoiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/utils/EasyPoiUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-poi/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/springboot-sms/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/springboot-sms/springbootsms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-redis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-sms/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-upload/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprintboot-shiro/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/RedisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/test/java/com/spring/redis/test/RedisTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-redis/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,24 +32,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EasyPoiApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/EasyPoiApplication.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-redis/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springboot-redis/src/test/java/com/spring/redis/test/RedisTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClusterOperations.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.11.RELEASE/spring-data-redis-2.0.11.RELEASE-sources.jar!/org/springframework/data/redis/core/ClusterOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisClusterNode.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.11.RELEASE/spring-data-redis-2.0.11.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisClusterNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/RedisApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,77 +136,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/dao/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EasyPoiController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/bean/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -211,6 +201,12 @@
         <option value="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/bean/User.java" />
         <option value="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java" />
         <option value="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/RedisApplication.java" />
+        <option value="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/service.java" />
+        <option value="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/springboot-redis/src/test/java/com/spring/redis/test/RedisTest.java" />
       </list>
     </option>
   </component>
@@ -225,7 +221,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="springboot-poi" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="springboot-redis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="springboot-redis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -262,45 +263,52 @@
             <path>
               <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-poi" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-poi" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-poi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-poi" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-poi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="easypoi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-poi" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,6 +333,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.spring.redis.service.impl" />
       <recent name="com.spring.easypoi.servic.impl" />
       <recent name="com.spring.rabbitmq.service.impl" />
     </key>
@@ -347,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EasyPoiApplication">
+  <component name="RunManager" selected="JUnit.RedisTest.testBasicRedis">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -375,23 +384,6 @@
       <option name="PACKAGE_NAME" value="com.spring.rabbitmq.test" />
       <option name="MAIN_CLASS_NAME" value="com.spring.rabbitmq.test.RabbitmqTest" />
       <option name="METHOD_NAME" value="fanout" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="RabbitmqTest.simple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springbootrabbitmq" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.spring.rabbitmq.test" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.rabbitmq.test.RabbitmqTest" />
-      <option name="METHOD_NAME" value="simple" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -436,6 +428,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="RedisTest.testBasicRedis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springbootredis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.spring.redis.test" />
+      <option name="MAIN_CLASS_NAME" value="com.spring.redis.test.RedisTest" />
+      <option name="METHOD_NAME" value="testBasicRedis" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -460,6 +469,10 @@
       <module name="springbootrabbitmq" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.rabbitmq.RabbitMQApplication" />
     </configuration>
+    <configuration name="RedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbootredis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.redis.RedisApplication" />
+    </configuration>
     <configuration name="TaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springboot-task" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.task.TaskApplication" />
@@ -476,20 +489,21 @@
       <item itemvalue="Spring Boot.WebSocketApplicaiton" />
       <item itemvalue="Spring Boot.RabbitMQApplication" />
       <item itemvalue="Spring Boot.TaskApplication" />
-      <item itemvalue="JUnit.RabbitmqTest.simple" />
       <item itemvalue="JUnit.RabbitmqTest.work" />
       <item itemvalue="JUnit.RabbitmqTest.fanout" />
       <item itemvalue="JUnit.RabbitmqTest.direct" />
       <item itemvalue="JUnit.RabbitmqTest.topic" />
       <item itemvalue="Spring Boot.EasyPoiApplication" />
+      <item itemvalue="Spring Boot.RedisApplication" />
+      <item itemvalue="JUnit.RedisTest.testBasicRedis" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedisTest.testBasicRedis" />
         <item itemvalue="JUnit.RabbitmqTest.topic" />
         <item itemvalue="JUnit.RabbitmqTest.direct" />
         <item itemvalue="JUnit.RabbitmqTest.work" />
         <item itemvalue="JUnit.RabbitmqTest.fanout" />
-        <item itemvalue="JUnit.RabbitmqTest.simple" />
       </list>
     </recent_temporary>
   </component>
@@ -515,26 +529,11 @@
       <workItem from="1556176971722" duration="3367000" />
       <workItem from="1556257149825" duration="9817000" />
       <workItem from="1556418860045" duration="18764000" />
-      <workItem from="1556501623689" duration="13409000" />
+      <workItem from="1556501623689" duration="24086000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RabbitmqTest_direct - 2019.04.28 at 15h 29m 40s.xml">
-      <configuration name="RabbitmqTest.direct" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RabbitmqTest_direct - 2019.04.28 at 15h 34m 02s.xml">
-      <configuration name="RabbitmqTest.direct" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RabbitmqTest_direct - 2019.04.28 at 15h 37m 26s.xml">
-      <configuration name="RabbitmqTest.direct" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RabbitmqTest_direct - 2019.04.28 at 15h 38m 33s.xml">
-      <configuration name="RabbitmqTest.direct" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RabbitmqTest_direct - 2019.04.28 at 15h 40m 23s.xml">
-      <configuration name="RabbitmqTest.direct" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RabbitmqTest_direct - 2019.04.28 at 15h 44m 16s.xml">
       <configuration name="RabbitmqTest.direct" configurationId="JUnit" />
     </history-entry>
@@ -550,9 +549,24 @@
     <history-entry file="RabbitmqTest_topic - 2019.04.28 at 16h 05m 51s.xml">
       <configuration name="RabbitmqTest.topic" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RedisTest_testBasicRedis - 2019.04.29 at 17h 30m 20s.xml">
+      <configuration name="RedisTest.testBasicRedis" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testBasicRedis - 2019.04.29 at 17h 31m 22s.xml">
+      <configuration name="RedisTest.testBasicRedis" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testBasicRedis - 2019.04.29 at 17h 31m 59s.xml">
+      <configuration name="RedisTest.testBasicRedis" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testBasicRedis - 2019.04.29 at 17h 34m 54s.xml">
+      <configuration name="RedisTest.testBasicRedis" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testBasicRedis - 2019.04.29 at 17h 35m 35s.xml">
+      <configuration name="RedisTest.testBasicRedis" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67528000" />
+    <option name="totallyTimeSpent" value="78205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -566,17 +580,17 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.17537314" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.16248637" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.28789532" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4438386" visible="true" weight="0.27345416" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72434914" visible="true" weight="0.27345416" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Alibaba Cloud View" order="7" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.090512544" />
       <window_info id="Alibaba Cloud Explorer" order="4" />
-      <window_info id="Structure" order="1" sideWeight="0.5561614" side_tool="true" weight="0.27345416" />
+      <window_info id="Structure" order="1" sideWeight="0.27565083" side_tool="true" visible="true" weight="0.27345416" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -598,70 +612,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/安装erlang成功图片.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-websocket/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="405">
-            <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/Centos7安装rabbitmq.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="189">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/task/ScheduleTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/clip_image001-1527067240682.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/rabbit下载和安装帮助文档.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/TaskApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.0.8.RELEASE/spring-amqp-2.0.8.RELEASE-sources.jar!/org/springframework/amqp/core/AmqpTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/controller/RabbitmqController.java" />
     <entry file="file://$PROJECT_DIR$/springboot-rabbitmq/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -894,7 +844,7 @@
     <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -904,7 +854,7 @@
     <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/dao/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -914,7 +864,7 @@
     <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
-          <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -924,7 +874,7 @@
     <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -934,7 +884,7 @@
     <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
-          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#329#330#0" expanded="true" />
@@ -970,7 +920,94 @@
     <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/RedisApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.11.RELEASE/spring-data-redis-2.0.11.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2403">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#4532#4561#0" expanded="true" />
+            <element signature="e#4619#4648#0" expanded="true" />
+            <element signature="e#4708#4737#0" expanded="true" />
+            <element signature="e#4799#4828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.11.RELEASE/spring-data-redis-2.0.11.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisClusterNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.11.RELEASE/spring-data-redis-2.0.11.RELEASE-sources.jar!/org/springframework/data/redis/core/ClusterOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/test/java/com/spring/redis/test/RedisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
