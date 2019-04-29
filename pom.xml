@@ -13,6 +13,12 @@
         <module>springboot-task</module>
         <module>springboot-swagger2</module>
         <module>springboot-rabbitmq</module>
+        <module>springboot-sms</module>
+        <module>springboot-redis</module>
+        <module>sprintboot-shiro</module>
+        <module>springboot-elasticsearch</module>
+        <module>springboot-upload</module>
+        <module>springboot-poi</module>
     </modules>
 
     <parent>
