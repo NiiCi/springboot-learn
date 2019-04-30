@@ -19,6 +19,7 @@
         <module>springboot-elasticsearch</module>
         <module>springboot-upload</module>
         <module>springboot-poi</module>
+        <module>springboot-aop</module>
     </modules>
 
     <parent>
