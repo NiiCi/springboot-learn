@@ -16,6 +16,6 @@ public class AspectJController {
 
     @PostMapping
     public void testAop(@RequestParam("username")String username){
-        aspectJService.test();
+        aspectJService.test(username);
     }
 }

@@ -12,6 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.context.request.WebRequest;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Modifier;
 
 @Component //添加 组件注解
 @Aspect // 声明是一个 切面类
@@ -31,6 +32,19 @@ public class DaoAspect {
         log.info("spring aop aspectj 开启 -----");
         //获取 request 请求信息
         HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
-        log.info(request.getParameter("username"));
+        log.info("从 joinPoint 中获取 request 并获取请求参数 ----- "+request.getParameter("username"));
+        // 目标方法名
+        log.info("目标方法名 ----- "+joinPoint.getSignature().getName());
+        // 目标方法声明类型
+        log.info("目标方法声明类型 ----- "+Modifier.toString(joinPoint.getSignature().getModifiers()));
+        // 目标方法所属类的类名
+        log.info("目标方法所属类的类名 ----- "+joinPoint.getSignature().getDeclaringTypeName());
+        // 目标方法所属类的简单类名
+        log.info("目标方法所属类的简单类名 ----- "+joinPoint.getSignature().getDeclaringType().getSimpleName());
+        // 传入目标方法的参数
+        log.info("传入目标方法的参数个数 ----- "+joinPoint.getArgs().length);
+        for (int i = 0; i < joinPoint.getArgs().length; i++) {
+            log.info("第 "+ (i+1)+" 个参数的参数值为"+" "+joinPoint.getArgs()[i]);
+        }
     }
 }

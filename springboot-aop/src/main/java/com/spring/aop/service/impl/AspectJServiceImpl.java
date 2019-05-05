@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Log4j2
 public class AspectJServiceImpl implements AspectJService {
     @Override
-    public void test() {
+    public void test(String username) {
         log.info("service 测试 aop");
     }
 }

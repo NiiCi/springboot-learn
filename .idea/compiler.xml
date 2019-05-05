@@ -6,23 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springbootaop" />
         <module name="springboot-websocket" />
-        <module name="springboottask" />
         <module name="springbootpoi" />
         <module name="springboot-elasticsearch" />
         <module name="springboot-sms (2)" />
         <module name="springbootupload" />
+        <module name="sprintbootshiro" />
         <module name="sprintboot-shiro" />
-        <module name="springboot-redis" />
+        <module name="springboottask" />
         <module name="springboot-upload" />
+        <module name="springbootsms" />
         <module name="springbootelasticsearch" />
-        <module name="springbootswagger2" />
+        <module name="springbootaop" />
         <module name="springbootwebsocket" />
         <module name="springbootredis" />
-        <module name="springbootsms" />
+        <module name="springboot-redis" />
         <module name="springboot-poi" />
-        <module name="sprintbootshiro" />
+        <module name="springbootswagger2" />
         <module name="springboot-task" />
       </profile>
     </annotationProcessing>
