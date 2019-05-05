@@ -5,7 +5,6 @@ import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
-import java.sql.SQLOutput;
 
 /**
  *  自定义 cglib 动态代理
