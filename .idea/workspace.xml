@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/filter/SpringLearnFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/listener/SpringLearnListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/AopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/AopApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/AspectJApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/AspectJApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/aop/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/aop/ProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/AopApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/AopApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/AspectJApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/AspectJApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/advice/DaoAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/advice/DaoAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/aop/ProxyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/aop/ProxyFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/springboot-sms/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/springboot-sms/springbootsms.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/TaskApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/task/ScheduleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/task/ScheduleTask.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/filter/SpringLearnFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="589">
+              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#880#881#0" expanded="true" />
@@ -118,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="1656">
               <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -142,8 +129,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="1053">
               <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/task/ScheduleTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding>
+                <element signature="e#488#489#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/TaskApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -178,8 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/Centos6安装rabbitmq.md" />
-        <option value="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/Centos7安装rabbitmq.md" />
         <option value="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/RabbitMQApplication.java" />
         <option value="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/service/UserService.java" />
         <option value="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/service/impl/UserServiceImpl.java" />
@@ -229,6 +235,8 @@
         <option value="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/filter/SpringLearnFilter.java" />
         <option value="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/listener/SpringLearnListener.java" />
         <option value="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/AspectJApplication.java" />
+        <option value="$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/task/ScheduleTask.java" />
+        <option value="$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/TaskApplication.java" />
       </list>
     </option>
   </component>
@@ -278,41 +286,6 @@
             <path>
               <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-aop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-aop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-aop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-aop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-aop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -377,7 +350,7 @@
     </option>
     <option name="contentProportion" value="0.15800866" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AspectJApplication">
+  <component name="RunManager" selected="Spring Boot.TaskApplication">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -527,7 +500,7 @@
       <workItem from="1556603807743" duration="408000" />
       <workItem from="1556604253501" duration="83000" />
       <workItem from="1556604371031" duration="9161000" />
-      <workItem from="1557032685670" duration="9349000" />
+      <workItem from="1557032685670" duration="9915000" />
     </task>
     <servers />
   </component>
@@ -564,7 +537,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97282000" />
+    <option name="totallyTimeSpent" value="97848000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,7 +574,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.06026786" />
-      <window_info anchor="bottom" id="Run Dashboard" order="17" visible="true" weight="0.16629465" />
+      <window_info anchor="bottom" id="Run Dashboard" order="17" visible="true" weight="0.29017857" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.14285715" />
@@ -615,23 +588,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.11.RELEASE/spring-data-redis-2.0.11.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisClusterNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-redis/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -945,27 +901,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar!/org/springframework/web/servlet/handler/HandlerInterceptorAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,12 +956,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/filter/SpringLearnFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="589">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#880#881#0" expanded="true" />
             <element signature="e#930#931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/interceptor/SpringLearnInterceptor2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/TaskApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-task/src/main/java/com/spring/task/task/ScheduleTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#488#489#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-@EnableScheduling //开启定时任务
 @Log4j2
 public class ScheduleTask {
     /**
