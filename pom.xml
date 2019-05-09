@@ -20,6 +20,7 @@
         <module>springboot-upload</module>
         <module>springboot-poi</module>
         <module>springboot-aop</module>
+        <module>springboot-httpClient</module>
     </modules>
 
     <parent>
