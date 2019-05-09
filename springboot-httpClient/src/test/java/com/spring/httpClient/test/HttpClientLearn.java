@@ -5,7 +5,6 @@ import com.spring.httpClient.HttpClientApplication;
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpRequest;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -22,6 +21,7 @@ import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
