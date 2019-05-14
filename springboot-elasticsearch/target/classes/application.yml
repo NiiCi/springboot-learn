@@ -1,0 +1,11 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: elasticsearch-service
+  data:
+    elasticsearch:
+      # 集群名称 是在服务上 elasticsearch的config目录下的 elasticsearch.yml 中配置的名称
+      cluster-name: leyou-es
+      cluster-nodes: 148.70.3.235:9300

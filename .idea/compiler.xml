@@ -6,25 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboothttpClient" />
-        <module name="springbootredis" />
-        <module name="springboot-websocket" />
-        <module name="springbootpoi" />
-        <module name="springboot-sms (2)" />
-        <module name="springbootupload" />
-        <module name="sprintbootshiro" />
-        <module name="springboottask" />
-        <module name="springboot-poi" />
-        <module name="springboot-upload" />
-        <module name="springbootsms" />
-        <module name="springbootelasticsearch" />
-        <module name="springbootaop" />
-        <module name="sprintboot-shiro" />
+        <module name="springboot-aop" />
         <module name="springboot-elasticsearch" />
+        <module name="springboot-httpClient" />
+        <module name="springboot-poi" />
         <module name="springboot-redis" />
-        <module name="springbootwebsocket" />
-        <module name="springbootswagger2" />
+        <module name="springboot-sms (2)" />
         <module name="springboot-task" />
+        <module name="springboot-upload" />
+        <module name="springboot-websocket" />
+        <module name="springbootaop" />
+        <module name="springbootelasticsearch" />
+        <module name="springboothttpClient" />
+        <module name="springbootpoi" />
+        <module name="springbootredis" />
+        <module name="springbootsms" />
+        <module name="springbootswagger2" />
+        <module name="springboottask" />
+        <module name="springbootupload" />
+        <module name="springbootwebsocket" />
+        <module name="sprintboot-shiro" />
+        <module name="sprintbootshiro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
