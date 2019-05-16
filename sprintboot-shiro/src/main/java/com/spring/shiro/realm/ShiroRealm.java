@@ -61,15 +61,15 @@ public class ShiroRealm extends AuthorizingRealm {
 		Set<String> roles = new HashSet<>();
 		Set<String> stringPermissions = new HashSet<>();
 		//通过用户名查询角色,存入set集合
-		List<Roles> roleList = navServie.queryRolesByName(principal.getPrimaryPrincipal().toString());
+		/*List<Roles> roleList = navServie.queryRolesByName(principal.getPrimaryPrincipal().toString());
 		for (Roles role : roleList) {
 			roles.add(role.getRoleCode());
-		}
+		}*/
 		//通过用户名查询权限,存入set 集合
-		List<Pers> perList = navServie.queryAllPers(principal.getPrimaryPrincipal().toString());
+		/*List<Pers> perList = navServie.queryAllPers(principal.getPrimaryPrincipal().toString());
 		for (Pers pers : perList) {
 			stringPermissions.add(pers.getPerCode());
-		}
+		}*/
 		SimpleAuthorizationInfo sz = new SimpleAuthorizationInfo();
 		sz.setRoles(roles);
 		sz.setStringPermissions(stringPermissions);
