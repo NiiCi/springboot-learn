@@ -1,4 +1,4 @@
-package com.spring.lambda;
+package com.spring.lambda.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
