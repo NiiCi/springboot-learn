@@ -1,0 +1,11 @@
+server:
+  port: 8090
+  servlet:
+    context-path:
+
+# Logging configuration
+logging:
+  level:
+    org.springframework:
+      data: DEBUG
+      security: DEBUG

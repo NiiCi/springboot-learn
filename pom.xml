@@ -22,6 +22,8 @@
         <module>springboot-aop</module>
         <module>springboot-httpClient</module>
         <module>springboot-lambda</module>
+        <module>springboot-jsoup</module>
+        <module>springboot-security-jwt</module>
     </modules>
 
     <parent>
@@ -84,12 +86,6 @@
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>
                 <version>${fastDFS.client.version}</version>
-            </dependency>
-            <!-- lombok -->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.20</version>
             </dependency>
             <!-- 热部署 -->
             <dependency>

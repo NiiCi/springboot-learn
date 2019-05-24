@@ -16,4 +16,5 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(new SpringLearnInterceptor1()).addPathPatterns("/**");
         registry.addInterceptor(new SpringLearnInterceptor2()).addPathPatterns("/**");
     }
+
 }

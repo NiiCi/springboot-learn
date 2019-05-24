@@ -6,27 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboothttpClient" />
+        <module name="springbootjsoup" />
+        <module name="springbootredis" />
         <module name="springboot-websocket" />
         <module name="springboot-aop" />
         <module name="springbootpoi" />
-        <module name="springboot-elasticsearch" />
-        <module name="springboot-sms (2)" />
-        <module name="springbootupload" />
-        <module name="springbootlambda" />
-        <module name="springbootswagger2" />
-        <module name="springboottask" />
-        <module name="springboot-poi" />
-        <module name="springboot-upload" />
-        <module name="springbootelasticsearch" />
         <module name="springbootaop" />
+        <module name="springbootupload" />
+        <module name="springboot-task" />
+        <module name="springbootlambda" />
+        <module name="springboottask" />
+        <module name="springbootsecurityjwt" />
+        <module name="springboothttpClient" />
+        <module name="springboot-sms (2)" />
+        <module name="springbootelasticsearch" />
+        <module name="springbootswagger2" />
         <module name="sprintboot-shiro" />
-        <module name="springbootredis" />
+        <module name="springboot-elasticsearch" />
         <module name="springbootsms" />
         <module name="springboot-httpClient" />
-        <module name="springbootwebsocket" />
+        <module name="springboot-poi" />
         <module name="sprintbootshiro" />
-        <module name="springboot-task" />
+        <module name="springboot-upload" />
+        <module name="springbootwebsocket" />
         <module name="springboot-redis" />
       </profile>
     </annotationProcessing>
@@ -46,7 +48,9 @@
       <module name="springboot-websocket" options="-parameters" />
       <module name="springbootaop" options="-parameters" />
       <module name="springboothttpClient" options="-parameters" />
+      <module name="springbootjsoup" options="-parameters" />
       <module name="springbootlambda" options="-parameters" />
+      <module name="springbootsecurityjwt" options="-parameters" />
       <module name="springbootswagger2" options="-parameters" />
       <module name="sprintboot-shiro" options="-parameters" />
     </option>
