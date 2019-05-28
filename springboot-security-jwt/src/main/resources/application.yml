@@ -3,9 +3,38 @@ server:
   servlet:
     context-path:
 
+
+
 # Logging configuration
-logging:
-  level:
-    org.springframework:
-      data: DEBUG
-      security: DEBUG
+#logging:
+#  level:
+#    org.springframework:
+#      data: DEBUG
+#      security: DEBUG
+
+spring:
+  #配置 redis 连接信息
+  redis:
+    port: 6379
+    host: 148.70.3.235
+    password: asdasdnc2.
+    database: 0
+#  thymeleaf:
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    cache: false
+
+niici:
+  security:
+    browser:
+    # 登录页 设置
+      loginPage: /login.html
+    # 返回 类型设置 (JSON 还是 VIEW)
+      loginType: REDIRECT
+    code:
+      image:
+        length: 6
+        height: 100
+        url:
+        - /user
+        - /user/*

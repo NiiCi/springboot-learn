@@ -2,68 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Activities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/DeliveryMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Flavors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/FoldingRestaurants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Gradient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/PiecewiseAgentFee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Recommend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/RecommendReasons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/ResultPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Rules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/SupportTags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Supports.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Theme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/util/GeoHashUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/JsoupApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/County.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/Province.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/town.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/dao/ProvinceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-jsoup/src/test/java/com/niici/jsoup/test/JsoupTestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Aliens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/CompressionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Compressor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/LandingObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Macro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Moon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Nasa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Close.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/GZipCompressionStrategyImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Open.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Save.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/ZipCompressionStrategyImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/springbootsecurityjwt.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/SecurityApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTUserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/ObjectUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/RSAUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationFailureHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationSuccessHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/base/BaseResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/ImageCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/ImageConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/ValidateCodeBeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/BrowerSecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/ValidateCodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/exception/ValidateCodeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ImageCodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ValidateCodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/BrowserProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/ImageCodeProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/LoginType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/SecurityProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/ValidateCodeProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/ImageCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/ImageCodeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/demoLogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-httpClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-httpClient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-httpClient/src/test/java/com/spring/httpClient/test/HttpClientLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-httpClient/src/test/java/com/spring/httpClient/test/HttpClientLearn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-httpClient/target/test-classes/com/spring/httpClient/test/HttpClientLearn.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-httpClient/target/test-classes/com/spring/httpClient/test/HttpClientLearn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-lambda/src/test/java/com/spring/lambda/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-lambda/src/test/java/com/spring/lambda/test/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-aop/target/classes/META-INF/springbootaop.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/listener/SpringLearnListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/target/classes/com/spring/aop/listener/SpringLearnListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-elasticsearch/target/classes/com/spring/elasticsearch/ElasticSearchApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-elasticsearch/target/classes/com/spring/elasticsearch/bean/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-elasticsearch/target/classes/com/spring/elasticsearch/dao/ElasticSearchMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-elasticsearch/target/test-classes/com/spring/elasticsearch/test/ElasticsearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-httpClient/target/classes/META-INF/springboothttpClient.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-lambda/target/classes/META-INF/springbootlambda.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-lambda/target/test-classes/com/spring/lambda/test/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-lambda/target/test-classes/com/spring/lambda/test/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/EasyPoiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/bean/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/controller/EasyPoiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-poi/target/classes/com/spring/easypoi/utils/EasyPoiUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/target/classes/com/spring/rabbitmq/RabbitMQApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/target/classes/com/spring/rabbitmq/listener/RabbitMqListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/target/classes/com/spring/rabbitmq/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/target/classes/com/spring/rabbitmq/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/target/test-classes/com/spring/rabbitmq/test/RabbitmqTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/config/JwtUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/config/JwtUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/service/JwtUserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/target/classes/com/spring/security/service/JwtUserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-websocket/target/classes/com/spring/websocket/WebSocketApplicaiton.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-websocket/target/classes/com/spring/websocket/WebSocketApplicaiton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-websocket/target/classes/com/spring/websocket/controller/WebSocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-websocket/target/classes/com/spring/websocket/controller/WebSocketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-websocket/target/classes/com/spring/websocket/socket/WebSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-websocket/target/classes/com/spring/websocket/socket/WebSocket.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,10 +128,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="872">
+              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,38 +140,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/ValidateCodeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1891#1892#0" expanded="true" />
-                <element signature="e#1941#1942#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ValidateCodeFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="342">
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#945#946#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,17 +163,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="461">
+              <caret line="39" column="17" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="39" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/User.java">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/ValidateCodeProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="351">
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -200,40 +182,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/BrowserProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1276#1277#0" expanded="true" />
-                <element signature="e#1301#1302#0" expanded="true" />
-                <element signature="e#1366#1367#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
-                <element signature="e#1477#1478#0" expanded="true" />
-                <element signature="e#1565#1566#0" expanded="true" />
-                <element signature="e#1592#1593#0" expanded="true" />
-                <element signature="e#1679#1680#0" expanded="true" />
-                <element signature="e#1706#1707#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#1825#1826#0" expanded="true" />
-                <element signature="e#1902#1903#0" expanded="true" />
-                <element signature="e#1929#1930#0" expanded="true" />
-                <element signature="e#2016#2017#0" expanded="true" />
-                <element signature="e#2060#2061#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="496">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTUserFactory.java">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/ImageCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="-295">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/SecurityProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -242,19 +212,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTContext.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-web/1.1.6.RELEASE/spring-social-web-1.1.6.RELEASE-sources.jar!/org/springframework/social/connect/web/SessionStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/access/prepost/PreAuthorize.class">
+        <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ImageCodeFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="515">
+              <caret line="83" column="5" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -267,12 +237,10 @@
         <option value="Aspect" />
         <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindBugs-IDEA-Workspace">
-    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -282,6 +250,8 @@
       <find>IntStream</find>
       <find>intStream</find>
       <find>range</find>
+      <find>parserToken</find>
+      <find>generateToken</find>
     </findStrings>
     <dirStrings>
       <dir>F:\springboot-learn\springboot-poi</dir>
@@ -292,6 +262,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/sprintboot-shiro/src/main/java/com/spring/shiro/realm/ShiroRealm.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/BrowerSecurityController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/SecurityProperties.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationFailureHandlerImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationSuccessHandlerImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/spring/rabbitmq/test/RabbitmqTest.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/springboot-lambda/src/test/java/com/spring/lambda/test/test.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
@@ -299,33 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/dao/ProvinceMapper.java" />
-        <option value="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/town.java" />
-        <option value="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/Province.java" />
-        <option value="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/County.java" />
-        <option value="$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/bean/City.java" />
-        <option value="$PROJECT_DIR$/springboot-jsoup/src/test/java/com/niici/jsoup/test/JsoupTestApplication.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/util/GeoHashUtil.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/SupportsBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/DataMessage.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/DeliveryModeBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/FlavorsBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/GradientBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/ItemsBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/MetaBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/PiecewiseAgentFeeBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/RecommendBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/RecommendReasonsBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/aaa.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/util/FoldingRestaurantsBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/FoldingRestaurantsBean.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/ResultPage.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/FoldingRestaurants.java" />
-        <option value="$PROJECT_DIR$/springboot-httpClient/src/test/java/com/spring/httpClient/test/HttpClientLearn.java" />
-        <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Editor.java" />
-        <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Action.java" />
-        <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Close.java" />
-        <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Save.java" />
         <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Macro.java" />
         <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Open.java" />
         <option value="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/ZipCompressionStrategyImpl.java" />
@@ -341,15 +289,42 @@
         <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/SecurityApplication.java" />
         <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/RSAUtils.java" />
         <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTContext.java" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/User.java" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTUserFactory.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/AuthenticationSuccessHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/AuthenticationSuccessHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/AuthenticationFailureHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/ImageCode.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/ImageConstants.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/exception/ValidateCodeException.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/ImageCodeUtil.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ImageCodeFilter.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/User.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/LoginType.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/BrowerSecurities.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationFailureHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationSuccessHandlerImpl.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/SecurityProperties.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/BrowserProperties.java" />
         <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/LoginType.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/LoginType.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/base/BaseResult.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/BrowserProperties.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/BrowerSecurityController.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/error/404.html" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ValidateCodeFilter.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/SecurityProperties.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/ValidateCodeProperties.java" />
+        <option value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/ValidateCodeController.java" />
       </list>
     </option>
   </component>
@@ -374,7 +349,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -425,16 +399,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-security-jwt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -455,7 +419,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-security-jwt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-security-jwt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springboot-learn" type="b2602c69:ProjectViewProjectNode" />
@@ -470,10 +454,12 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -482,7 +468,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -496,11 +482,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.spring.security.config" />
       <recent name="com.spring.lambda.dao.impl" />
       <recent name="com.spring.lambda.dao" />
       <recent name="com.spring.aop.service.impl" />
       <recent name="com.spring.aop.dao.impl" />
-      <recent name="com.spring.redis.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.spring.lambda.dao.impl" />
@@ -508,11 +494,11 @@
       <recent name="com.spring.aop.interceptor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\springboot-learn\springboot-security-jwt\src\main\resources\templates" />
+      <recent name="F:\springboot-learn\springboot-security-jwt\src\main\java\com\spring\security\authentication" />
       <recent name="F:\springboot-learn\springboot-security-jwt\src\main\java\com\spring\security\bean" />
       <recent name="F:\springboot-learn\springboot-security-jwt\src\main\java\com\spring\security\util" />
       <recent name="F:\springboot-learn\springboot-lambda\lanbdabook" />
-      <recent name="F:\springboot-learn" />
-      <recent name="F:\springboot-learn\springboot-rabbitmq\rabbitmq\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,16 +529,6 @@
       <option name="PACKAGE_NAME" value="com.niici.jsoup.test" />
       <option name="MAIN_CLASS_NAME" value="com.niici.jsoup.test.JsoupTestApplication" />
       <option name="METHOD_NAME" value="doGetCity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JsoupTestApplication.doGetStreet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springbootjsoup" />
-      <option name="PACKAGE_NAME" value="com.niici.jsoup.test" />
-      <option name="MAIN_CLASS_NAME" value="com.niici.jsoup.test.JsoupTestApplication" />
-      <option name="METHOD_NAME" value="doGetStreet" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -644,7 +620,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="springbootsecurityjwt" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.security.SecurityApplication" />
       <method v="2">
@@ -673,7 +649,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.JsoupTestApplication.doGetStreet" />
       <item itemvalue="JUnit.JsoupTestApplication.doGetCity" />
       <item itemvalue="JUnit.test.charTest" />
       <item itemvalue="JUnit.test.testMLZ" />
@@ -693,11 +668,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SecurityApplication" />
         <item itemvalue="JUnit.test.testGCZ" />
         <item itemvalue="JUnit.test.testMLZ" />
         <item itemvalue="JUnit.test.charTest" />
         <item itemvalue="JUnit.JsoupTestApplication.doGetCity" />
-        <item itemvalue="JUnit.JsoupTestApplication.doGetStreet" />
       </list>
     </recent_temporary>
   </component>
@@ -740,6 +715,8 @@
       <workItem from="1558489118285" duration="28149000" />
       <workItem from="1558574872367" duration="10570000" />
       <workItem from="1558660943413" duration="15773000" />
+      <workItem from="1558920759988" duration="28624000" />
+      <workItem from="1559006582398" duration="17953000" />
     </task>
     <servers />
   </component>
@@ -776,7 +753,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264226000" />
+    <option name="totallyTimeSpent" value="310803000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,34 +768,34 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72321427" visible="true" weight="0.26652452" />
-      <window_info id="Structure" order="1" sideWeight="0.2767857" side_tool="true" weight="0.18017058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2933526" visible="true" weight="0.24626866" />
+      <window_info id="Structure" order="1" sideWeight="0.7066474" side_tool="true" weight="0.24626866" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Alibaba Cloud Explorer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.090512544" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.31473213" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.171875" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984375" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.20982143" />
-      <window_info anchor="bottom" id="Alibaba Cloud View" order="7" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="7" weight="0.32924107" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32924107" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.2109375" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.68191963" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32924107" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32924107" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4989339" weight="0.3125" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="14" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4989339" weight="0.29017857" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="14" weight="0.32924107" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.06026786" />
-      <window_info anchor="bottom" id="Run Dashboard" order="17" visible="true" weight="0.23214285" />
+      <window_info anchor="bottom" id="Run Dashboard" order="17" sideWeight="0.4989339" visible="true" weight="0.234375" />
       <window_info anchor="bottom" id="Run with VisualVM" order="18" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="19" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.14072494" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.16257995" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.17537314" />
       <window_info anchor="right" id="Database" order="4" weight="0.20895523" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
@@ -869,223 +846,17 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/FoldingRestaurants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/PiecewiseAgentFee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-jsoup/src/test/java/com/niici/jsoup/test/JsoupTestApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-httpClient/src/test/java/com/spring/httpClient/test/HttpClientLearn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/Activities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/requests/FilterRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/SupportTags.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-httpClient/src/main/java/com/spring/httpClient/bean/RecommendReasons.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-jsoup/src/main/java/com/niici/jsoup/JsoupApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Save.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Close.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/Open.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/CompressionStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/GZipCompressionStrategyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/impl/ZipCompressionStrategyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/zip/ZipOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
-          <folding>
-            <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3124#3125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/JukeBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/MusicalCarriage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/LoanApplication.java" />
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/test/java/com/spring/lambda/test/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="322" column="27" selection-start-line="322" selection-start-column="27" selection-end-line="322" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Carriage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/LandingObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Nasa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Moon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Aliens.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Macro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/dao/Compressor.java">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="28" column="79" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/RSAUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="96" column="1" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1096,199 +867,373 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/RSAUtils.java">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/JWTUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/SecurityApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/core/authority/SimpleGrantedAuthority.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="189">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="54">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.9.RELEASE/spring-security-config-5.0.9.RELEASE.jar!/org/springframework/security/config/annotation/web/reactive/EnableWebFluxSecurity.class">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/AuthenticationFailureHandlerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/AuthenticationSuccessHandlerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.9.RELEASE/spring-security-config-5.0.9.RELEASE.jar!/org/springframework/security/config/annotation/method/configuration/EnableGlobalMethodSecurity.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ResponseStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.9.RELEASE/spring-security-web-5.0.9.RELEASE-sources.jar!/org/springframework/security/web/DefaultRedirectStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        <state relative-caret-position="239">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.9.RELEASE/spring-security-web-5.0.9.RELEASE-sources.jar!/org/springframework/security/web/RedirectStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.9.RELEASE/spring-security-web-5.0.9.RELEASE-sources.jar!/org/springframework/security/web/savedrequest/RequestCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/core/userdetails/User.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="37" column="48" lean-forward="true" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.9.RELEASE/spring-security-web-5.0.9.RELEASE-sources.jar!/org/springframework/security/web/authentication/AuthenticationFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE-sources.jar!/org/springframework/boot/context/properties/ConfigurationProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-538">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/security/SecurityUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="198" column="26" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/connector/Request.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="1372" selection-start-line="1372" selection-end-line="1372" />
           <folding>
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#12534#12535#0" expanded="true" />
+            <element signature="e#12581#12582#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.9.RELEASE/spring-security-config-5.0.9.RELEASE.jar!/org/springframework/security/config/http/SessionCreationPolicy.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/connector/RequestFacade.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="250">
+          <caret line="429" selection-start-line="429" selection-end-line="429" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.9.RELEASE/spring-security-core-5.0.9.RELEASE.jar!/org/springframework/security/access/prepost/PreAuthorize.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/session/StandardSession.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="215">
+          <caret line="565" selection-start-line="565" selection-end-line="565" />
+          <folding>
+            <element signature="e#26244#26245#0" expanded="true" />
+            <element signature="e#26279#26280#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTContext.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/session/StandardSessionFacade.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#1321#1322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.9.RELEASE/spring-security-web-5.0.9.RELEASE-sources.jar!/org/springframework/security/web/savedrequest/HttpSessionRequestCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/demo-login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        <state relative-caret-position="302">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="-707">
+          <caret line="216" column="46" lean-forward="true" selection-start-line="216" selection-start-column="46" selection-end-line="216" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationSuccessHandlerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/service/JwtUserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="653">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/JWTUserFactory.java">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/base/BaseResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="351">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/User.java">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/LoginType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/SecurityApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/BrowerSecurityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/demoLogin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/JwtUser.java">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1276#1277#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1592#1593#0" expanded="true" />
-            <element signature="e#1679#1680#0" expanded="true" />
-            <element signature="e#1706#1707#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="e#1825#1826#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-            <element signature="e#1929#1930#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2060#2061#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/authentication/AuthenticationFailureHandlerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="561">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/error/BasicErrorController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/templates/error/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/ImageCodeProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/util/ImageCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/ValidateCodeBeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="872">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1941#1942#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/filter/SpringLearnFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-web/1.1.6.RELEASE/spring-social-web-1.1.6.RELEASE-sources.jar!/org/springframework/social/connect/web/SessionStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ImageCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/bean/ImageCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-295">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/SecurityProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/BrowserProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/properties/ValidateCodeProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/filter/ValidateCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java/com/spring/security/controller/ValidateCodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>

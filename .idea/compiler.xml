@@ -9,27 +9,27 @@
         <module name="springbootjsoup" />
         <module name="springbootredis" />
         <module name="springboot-websocket" />
+        <module name="sprintboot-shiro" />
         <module name="springboot-aop" />
         <module name="springbootpoi" />
-        <module name="springbootaop" />
+        <module name="springboot-sms (2)" />
         <module name="springbootupload" />
-        <module name="springboot-task" />
         <module name="springbootlambda" />
         <module name="springboottask" />
         <module name="springbootsecurityjwt" />
         <module name="springboothttpClient" />
-        <module name="springboot-sms (2)" />
         <module name="springbootelasticsearch" />
         <module name="springbootswagger2" />
-        <module name="sprintboot-shiro" />
+        <module name="springbootwebsocket" />
         <module name="springboot-elasticsearch" />
         <module name="springbootsms" />
         <module name="springboot-httpClient" />
         <module name="springboot-poi" />
         <module name="sprintbootshiro" />
         <module name="springboot-upload" />
-        <module name="springbootwebsocket" />
+        <module name="springboot-task" />
         <module name="springboot-redis" />
+        <module name="springbootaop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,75 +1,74 @@
 package com.spring.security.config;
 
+import com.spring.security.authentication.AuthenticationFailureHandlerImpl;
+import com.spring.security.authentication.AuthenticationSuccessHandlerImpl;
+import com.spring.security.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.AuthenticatedPrincipal;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * @author niici
- * 为了让Spring可以知道我们想怎样控制安全性，我们还需要建立一个安全配置类
+ * spring security　配置类
  */
 @Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableWebSecurity
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
     /**
-     * Spring会自动寻找同样类型的具体类注入，这里就是JwtUserDetailsServiceImpl了
+     * 注入 Security 属性类配置
      */
     @Autowired
-    private UserDetailsService userDetailsService;
+    private SecurityProperties securityProperties;
 
-    public void ConfigureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-        authenticationManagerBuilder
-                // 设置 userDetailService
-                .userDetailsService(this.userDetailsService)
-                // 使用BCrypt 进行密码的hash
-                .passwordEncoder(passwordEncoder());
-    }
-
-    // 装载 BCrypt 密码编码器
+    // 重写PasswordEncoder接口中的方法,实例化加密策略
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * 注入自定义的 登录成功或者失败的处理器
+     */
+    @Autowired
+    public AuthenticationSuccessHandlerImpl authenticationSuccessHandler;
+
+    @Autowired
+    public AuthenticationFailureHandlerImpl authenticationFailureHandler;
+
+
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity
-                // 由于使用的是JWT，我们这里不需要csrf
-                .csrf().disable()
 
-                // 基于token，所以不需要session
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-
+        String redirectUrl = securityProperties.getBrowser().getLoginPage();
+        // 表单登录方式
+        httpSecurity.formLogin()
+                //登录页面路径
+                .loginPage("/authentication/require")
+                // 登录表单提交的url
+                .loginProcessingUrl("/authentication/form")
+                // 添加登录成功/失败 处理器
+                .successHandler(authenticationSuccessHandler)
+                .failureHandler(authenticationFailureHandler)
+                .and()
+                //请求授权
                 .authorizeRequests()
-                //.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-
-                // 允许对于网站静态资源的无授权访问
-                .antMatchers(
-                        HttpMethod.GET,
-                        "/",
-                        "/*.html",
-                        "/favicon.ico",
-                        "/**/*.html",
-                        "/**/*.css",
-                        "/**/*.js"
-                ).permitAll()
-                // 对于获取token的rest api要允许匿名访问
-                .antMatchers("/auth/**").permitAll()
-                // 除上面外的所有请求全部需要鉴权认证
-                .anyRequest().authenticated();
-        // 禁用缓存
-        httpSecurity.headers().cacheControl();
+                //不需要权限认证的url
+                .antMatchers("/authentication/require",redirectUrl).permitAll()
+                //任何请求
+                .anyRequest()
+                //需要身份认证
+                .authenticated()
+                .and()
+                //关闭跨站请求保护
+                .csrf().disable();
     }
 }

@@ -113,6 +113,4 @@ public class JWTUtils {
                 ObjectUtils.toString(body.get(JWTContext.JWT_KEY_USER_NAME))
         );
     }
-
-
 }

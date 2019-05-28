@@ -17,6 +17,9 @@ public class JwtUser implements UserDetails{
     private final String username;
     private final String password;
     private final String email;
+    /**
+     * 用户权限集合
+     */
     private final Collection<? extends GrantedAuthority> authorities;
     private final Date lastPasswordResetDate;
 
@@ -34,6 +37,7 @@ public class JwtUser implements UserDetails{
         this.authorities = authorities;
         this.lastPasswordResetDate = lastPasswordResetDate;
     }
+
     //返回分配给用户的角色列表
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
