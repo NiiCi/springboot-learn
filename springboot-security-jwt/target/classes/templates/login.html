@@ -5,13 +5,31 @@
     <title>登录页</title>
 </head>
 <body>
-    <form action="/authentication/form" method="post">
-        <input name="username" placeholder="Username"><br/>
-        <input name="password" type="password" placeholder="Password"><br/>
-       <!-- <input name="code" type="text" placeholder="Code">
-        <img src="/getCode" style="margin-bottom: -12px;">-->
-        <br/>
-        <input type="submit" value="Login">
-    </form>
+<h2>登录</h2>
+<h3>表单登录</h3>
+<form action="/authentication/form" method="post">
+    <table>
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>验证码:</td>
+            <td>
+                <input type="text" name="imageCode">
+                <img src="/code/image">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">登录</button>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

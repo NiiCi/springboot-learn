@@ -4,13 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.sql.RowSet;
 import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ValidateCodeProperties {
-   private int length;
-   private int height;
-   private Set<String> url;
+   /**
+    * 图形验证码 配置属性
+    */
+   private ImageCodeProperties image = new ImageCodeProperties();
 }

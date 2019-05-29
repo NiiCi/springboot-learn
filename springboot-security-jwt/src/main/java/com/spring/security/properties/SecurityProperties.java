@@ -17,5 +17,8 @@ public class SecurityProperties {
      */
     private BrowserProperties browser = new BrowserProperties();
 
-    private ValidateCodeProperties image = new ValidateCodeProperties();
+    /**
+     * 验证码 属性类
+     */
+    private ValidateCodeProperties code = new ValidateCodeProperties();
 }

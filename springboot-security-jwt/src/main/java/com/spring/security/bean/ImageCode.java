@@ -1,6 +1,5 @@
 package com.spring.security.bean;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,8 +11,8 @@ import java.time.LocalDateTime;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class ImageCode {
+
     /**
      * 验证码 BufferedImage 对象
      */
@@ -29,6 +28,11 @@ public class ImageCode {
      */
     private LocalDateTime expireTime;
 
+    public ImageCode(BufferedImage image,String code,LocalDateTime expireTime){
+        this.image = image;
+        this.code = code;
+        this.expireTime = expireTime;
+    }
     public ImageCode(BufferedImage image,String code,int expireIn){
         this.image=image;
         this.code=code;
@@ -39,7 +43,7 @@ public class ImageCode {
      * 判断是否过期
      * @return
      */
-    public boolean isExpire(){
+    public boolean isExpired(){
         return LocalDateTime.now().isAfter(expireTime);
     }
 }

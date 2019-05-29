@@ -4,6 +4,7 @@ import org.springframework.security.core.AuthenticationException;
 
 /**
  * 自定义验证码校验异常
+ * @author niici
  */
 public class ValidateCodeException extends AuthenticationException {
     public ValidateCodeException(String msg){

@@ -1,11 +1,14 @@
 package com.spring.security.filter;
 
-import com.spring.security.authentication.AuthenticationFailureHandlerImpl;
+import com.spring.security.authentication.JWTAuthenticationFailureHandler;
 import com.spring.security.bean.ImageCode;
 import com.spring.security.controller.ValidateCodeController;
 import com.spring.security.exception.ValidateCodeException;
 import com.spring.security.properties.SecurityProperties;
 import com.spring.security.properties.ValidateCodeProperties;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
@@ -29,21 +32,26 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 验证码过滤器
+ * 4.验证码过滤器
+ * 在用户密码验证之前进行验证码验证
  */
 @Log4j2
 @Component
+@Data
 public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     /**
-     * 注入 登录失败/成功 处理器
+     * 注入 登录失败 处理器
      */
     @Autowired
-    private AuthenticationFailureHandlerImpl failureHandler;
+    private JWTAuthenticationFailureHandler failureHandler;
 
     /**
      * Session 对象
+     * 验证码我们在生成时 添加到了session 中
      */
+    @Getter
+    @Setter
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
     /**
@@ -69,6 +77,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     public void afterPropertiesSet() throws ServletException {
         //在初始化配置完成后 运行此方法
         super.afterPropertiesSet();
+        // 读取验证码的配置属性
         ValidateCodeProperties code = securityProperties.getCode();
         logger.info(String.valueOf(code));
         //将 application 配置中的 url 属性进行 切割
@@ -98,7 +107,6 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
             }catch (ValidateCodeException exception){
                 //返回错误信息给 失败处理器
                 failureHandler.onAuthenticationFailure(request,response,exception);
-                return;
             }
         }else {
             //不做任何处理，调用后面的 过滤器
@@ -120,7 +128,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
             logger.info("验证码不存在");
             throw new ValidateCodeException("验证码不存在");
         }
-        if (codeInSession.isExpire()){
+        if (codeInSession.isExpired()){
             logger.info("验证码已过期");
             sessionStrategy.removeAttribute(request,ValidateCodeController.SESSION_KEY);
             throw new ValidateCodeException("验证码已过期");

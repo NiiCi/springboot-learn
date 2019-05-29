@@ -22,7 +22,7 @@ import java.io.IOException;
  */
 @Log4j2
 @Component
-public class  AuthenticationFailureHandlerImpl extends SimpleUrlAuthenticationFailureHandler {
+public class JWTAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
     private ObjectMapper objectMapper;
     @Autowired
     private SecurityProperties securityProperties;

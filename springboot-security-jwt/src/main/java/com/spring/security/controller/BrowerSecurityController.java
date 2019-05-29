@@ -13,10 +13,7 @@ import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -52,7 +49,7 @@ public class BrowerSecurityController {
      */
     @RequestMapping("/authentication/require")
     @ResponseBody
-    public Object requireAuthentication(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public Object requireAuthentication(HttpServletRequest request, HttpServletResponse response){
         // 拿到请求对象
         SavedRequest savedRequest = requestCache.getRequest(request, response);
         if (savedRequest != null) {
@@ -64,15 +61,19 @@ public class BrowerSecurityController {
             if (StringUtils.endsWithIgnoreCase(targetUrl,".html")) {
                 String redirectUrl = securityProperties.getBrowser().getLoginPage();
                 log.info("重定向路径 ---- {}",redirectUrl);
-                redirectStrategy.sendRedirect(request,response,redirectUrl);
+                try {
+                    redirectStrategy.sendRedirect(request,response,redirectUrl);
+                } catch (IOException e) {
+                    log.error(e.getMessage(),e);
+                }
             }
         }
         // 如果 targetUrl 不是 .html 说明是 json 请求,返回json字符串提示信息
         return new BaseResult("访问的服务需要认证,请引导用户到登录页");
     }
 
-    @RequestMapping("/login.html")
+    @GetMapping("/demoLogin.html")
     public Object loginHtml(HttpServletRequest request, HttpServletResponse response) throws IOException {
-       return "login";
+       return "demoLogin";
     }
 }

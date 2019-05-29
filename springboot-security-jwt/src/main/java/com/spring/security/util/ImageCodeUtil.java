@@ -1,15 +1,17 @@
+/*
 package com.spring.security.util;
 
 import com.spring.security.bean.ImageCode;
-import com.spring.security.config.ImageConstants;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+*/
 /**
  * 图形验证码生成工具类
- */
+ *//*
+
 public class ImageCodeUtil {
     public static ImageCode createImageCode() {
         int width = ImageConstants.CODE_WIDTH;
@@ -58,3 +60,4 @@ public class ImageCodeUtil {
         return new Color(r, g, b);
     }
 }
+*/

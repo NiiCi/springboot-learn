@@ -22,7 +22,7 @@ import java.io.IOException;
  */
 @Log4j2
 @Component
-public class AuthenticationSuccessHandlerImpl extends SavedRequestAwareAuthenticationSuccessHandler {
+public class JWTAuthenticationSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
     private ObjectMapper objectMapper;
     @Autowired
     private SecurityProperties securityProperties;
