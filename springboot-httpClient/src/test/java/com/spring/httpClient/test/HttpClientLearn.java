@@ -155,6 +155,8 @@ public class HttpClientLearn {
         } catch (IOException e) {
             log.error(e.getMessage(), e);
         } finally {
+            {
+            }
             try {
                 httpClient.close();
             } catch (IOException e) {

@@ -24,6 +24,7 @@
         <module>springboot-lambda</module>
         <module>springboot-jsoup</module>
         <module>springboot-security-jwt</module>
+        <module>docker-learn</module>
     </modules>
 
     <parent>

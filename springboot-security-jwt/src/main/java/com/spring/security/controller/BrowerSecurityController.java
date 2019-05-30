@@ -1,6 +1,7 @@
 package com.spring.security.controller;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.spring.security.base.BaseResult;
 import com.spring.security.properties.SecurityProperties;
 import lombok.extern.log4j.Log4j2;
@@ -58,16 +59,17 @@ public class BrowerSecurityController {
             log.info("引发跳转的请求是 , {}", targetUrl);
 
             // 判断 targerUrl 是否为 .html 结尾,如果是 跳转到登录页(返回view)
-            if (StringUtils.endsWithIgnoreCase(targetUrl,".html")) {
+            if (StringUtils.endsWithIgnoreCase(targetUrl, ".html")) {
                 String redirectUrl = securityProperties.getBrowser().getLoginPage();
-                log.info("重定向路径 ---- {}",redirectUrl);
+                log.info("重定向路径 ---- {}", redirectUrl);
                 try {
-                    redirectStrategy.sendRedirect(request,response,redirectUrl);
+                    redirectStrategy.sendRedirect(request, response, redirectUrl);
                 } catch (IOException e) {
-                    log.error(e.getMessage(),e);
+                    log.error(e.getMessage(), e);
                 }
             }
         }
+        JSONObject.toJSONString("{'user':'0'}");
         // 如果 targetUrl 不是 .html 说明是 json 请求,返回json字符串提示信息
         return new BaseResult("访问的服务需要认证,请引导用户到登录页");
     }
