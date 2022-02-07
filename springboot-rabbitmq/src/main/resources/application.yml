@@ -1,23 +1,24 @@
 spring:
   rabbitmq:
-    host: 148.70.3.235
-    username: niici
-    password: niici
-    virtual-host: /niici
+    host: 192.168.18.164
+    username: admin
+    password: admin
+    port: 5672
+    virtual-host: /
     template:
-        retry:
-          #启用重试
-          enabled: true
-            #第一次重试的间隔时长
-          initial-interval: 10000ms
-            # 最长重试间隔，超过间隔将不在重试
-          max-interval: 210000ms
-             # 下次重试间隔的倍数，即下次重试时 间隔时间是上次的几倍
-          multiplier: 2
+      retry:
+        #启用重试
+        enabled: true
+        #第一次重试的间隔时长
+        initial-interval: 10000ms
+        # 最长重试间隔，超过间隔将不在重试
+        max-interval: 210000ms
+        # 下次重试间隔的倍数，即下次重试时 间隔时间是上次的几倍
+        multiplier: 2
     #生产者确认机制，确保消息会正确发送，如果发送失败会有错误回执，从而触发重试
-    publisher-confirms: true
     listener:
       direct:
         acknowledge-mode: manual
       simple:
         acknowledge-mode: manual
+    publisher-confirm-type: simple

@@ -25,26 +25,27 @@ public class DaoAspect {
     /**
      * JoinPoint 可以获取通知的签名信息，如目标方法名，目标方法参数信息等
      * RequestContextHolder 可以获取请求信息，session 信息
+     *
      * @param joinPoint
      */
     @Before("executeDao()")
-    public void beforeDaoDo(JoinPoint joinPoint){
+    public void beforeDaoDo(JoinPoint joinPoint) {
         log.info("spring aop aspectj 开启 -----");
         //获取 request 请求信息
-        HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
-        log.info("从 joinPoint 中获取 request 并获取请求参数 ----- "+request.getParameter("username"));
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        log.info("从 joinPoint 中获取 request 并获取请求参数 ----- " + request.getParameter("username"));
         // 目标方法名
-        log.info("目标方法名 ----- "+joinPoint.getSignature().getName());
+        log.info("目标方法名 ----- " + joinPoint.getSignature().getName());
         // 目标方法声明类型
-        log.info("目标方法声明类型 ----- "+Modifier.toString(joinPoint.getSignature().getModifiers()));
+        log.info("目标方法声明类型 ----- " + Modifier.toString(joinPoint.getSignature().getModifiers()));
         // 目标方法所属类的类名
-        log.info("目标方法所属类的类名 ----- "+joinPoint.getSignature().getDeclaringTypeName());
+        log.info("目标方法所属类的类名 ----- " + joinPoint.getSignature().getDeclaringTypeName());
         // 目标方法所属类的简单类名
-        log.info("目标方法所属类的简单类名 ----- "+joinPoint.getSignature().getDeclaringType().getSimpleName());
+        log.info("目标方法所属类的简单类名 ----- " + joinPoint.getSignature().getDeclaringType().getSimpleName());
         // 传入目标方法的参数
-        log.info("传入目标方法的参数个数 ----- "+joinPoint.getArgs().length);
+        log.info("传入目标方法的参数个数 ----- " + joinPoint.getArgs().length);
         for (int i = 0; i < joinPoint.getArgs().length; i++) {
-            log.info("第 "+ (i+1)+" 个参数的参数值为"+" "+joinPoint.getArgs()[i]);
+            log.info("第 " + (i + 1) + " 个参数的参数值为" + " " + joinPoint.getArgs()[i]);
         }
     }
 }

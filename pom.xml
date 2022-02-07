@@ -12,7 +12,7 @@
         <module>springboot-websocket</module>
         <module>springboot-task</module>
         <module>springboot-swagger2</module>
-        <module>springboot-rabbitmq</module>
+        <module>springboot-rabbitmq-old</module>
         <module>springboot-sms</module>
         <module>springboot-redis</module>
         <module>sprintboot-shiro</module>
@@ -25,12 +25,14 @@
         <module>springboot-jsoup</module>
         <module>springboot-security-jwt</module>
         <module>docker-learn</module>
+        <module>springboot-day1</module>
+        <module>springboot-rabbitmq</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.6.RELEASE</version>
+        <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -94,6 +96,11 @@
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>2.0.6.RELEASE</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>2.4.5</version>
+            </dependency>
             <!-- swaggerui 依赖 start -->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -118,13 +125,23 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <version>1.18.20</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.8</version>
+            <version>2.11.4</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-core</artifactId>-->
+<!--            <version>2.11.4</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-annotations</artifactId>-->
+<!--            <version>2.11.4</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -153,7 +170,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <fork>true</fork>     <!--fork :  如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+                    <fork>true</fork>     <!--fork :  如果没有该项配置，可能devtools不会起作用，即应用不会restart -->
                 </configuration>
             </plugin>
         </plugins>

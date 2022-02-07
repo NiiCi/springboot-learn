@@ -19,7 +19,7 @@ RabbitMQ是基于AMQP的一款消息管理系统
 
 ## Srping AMPQ
 
-Sprin有很多不同的项目，其中就有对AMQP的支持: 
+Spring有很多不同的项目，其中就有对AMQP的支持: 
 
 ![1527089338661](rabbitmq/assets/1527089338661.png)
 

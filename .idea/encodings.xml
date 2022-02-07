@@ -4,19 +4,42 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/docker-learn" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-day1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-elasticsearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-httpClient" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-httpClient/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-jsoup" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-jsoup/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-lambda" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-lambda/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-poi" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot-rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-poi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-poi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitmq-old" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitmq-old/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitmq-old/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitmq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-security-jwt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-security-jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-security-jwt/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-sms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-swagger2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-swagger2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-task" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-task/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-upload" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-websocket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-websocket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-websocket/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sprintboot-shiro" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sprintboot-shiro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sprintboot-shiro/src/main/resources" charset="UTF-8" />
   </component>
 </project>

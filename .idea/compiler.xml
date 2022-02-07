@@ -2,35 +2,43 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springbootjsoup" />
-        <module name="springbootredis" />
-        <module name="springboot-websocket" />
-        <module name="springboot-aop" />
+        <module name="docker-learn" />
         <module name="springbootpoi" />
-        <module name="springboot-sms (2)" />
-        <module name="springbootupload" />
-        <module name="springboot-task" />
-        <module name="springbootlambda" />
-        <module name="springboottask" />
-        <module name="springbootsecurityjwt" />
-        <module name="springboothttpClient" />
-        <module name="dockerlearn" />
-        <module name="springbootelasticsearch" />
+        <module name="springboot-day1" />
         <module name="springbootswagger2" />
-        <module name="sprintboot-shiro" />
-        <module name="springboot-elasticsearch" />
-        <module name="springbootsms" />
-        <module name="springboot-httpClient" />
-        <module name="springboot-poi" />
-        <module name="sprintbootshiro" />
-        <module name="springboot-upload" />
-        <module name="springbootwebsocket" />
-        <module name="springboot-redis" />
+        <module name="springbootjsoup" />
         <module name="springbootaop" />
+        <module name="springbootsms" />
+        <module name="springboot-sms" />
+        <module name="springboot-websocket" />
+        <module name="springboot-rabbitmq" />
+        <module name="springbootelasticsearch" />
+        <module name="sprintbootshiro" />
+        <module name="springbootwebsocket" />
+        <module name="springbootupload" />
+        <module name="springboot-poi" />
+        <module name="dockerlearn" />
+        <module name="springboot-httpClient" />
+        <module name="springboot-jsoup" />
+        <module name="springboot-upload" />
+        <module name="springboot-aop" />
+        <module name="springbootsecurityjwt" />
+        <module name="springboot-lambda" />
+        <module name="springbootredis" />
+        <module name="springboot-sms (2)" />
+        <module name="springboot-redis" />
+        <module name="springboot-security-jwt" />
+        <module name="springboothttpClient" />
+        <module name="springbootlambda" />
+        <module name="springboot-elasticsearch" />
+        <module name="springboot-task" />
+        <module name="springboottask" />
+        <module name="sprintboot-shiro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,10 +48,19 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="docker-learn" options="-parameters" />
       <module name="dockerlearn" options="-parameters" />
+      <module name="springboot-aop" options="-parameters" />
+      <module name="springboot-day1" options="-parameters" />
       <module name="springboot-elasticsearch" options="-parameters" />
+      <module name="springboot-httpClient" options="-parameters" />
+      <module name="springboot-jsoup" options="-parameters" />
+      <module name="springboot-lambda" options="-parameters" />
       <module name="springboot-poi" options="-parameters" />
+      <module name="springboot-rabbitmq" options="-parameters" />
       <module name="springboot-redis" options="-parameters" />
+      <module name="springboot-security-jwt" options="-parameters" />
+      <module name="springboot-sms" options="-parameters" />
       <module name="springboot-sms (2)" options="-parameters" />
       <module name="springboot-task" options="-parameters" />
       <module name="springboot-upload" options="-parameters" />

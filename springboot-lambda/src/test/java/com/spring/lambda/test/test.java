@@ -1,12 +1,18 @@
 package com.spring.lambda.test;
 
 import com.alibaba.fastjson.JSONObject;
+import com.spring.lambda.bean.Elvis;
+import com.spring.lambda.bean.Elvis2;
+import com.spring.lambda.bean.NutritionFacts;
 import com.spring.lambda.bean.User;
 import com.spring.lambda.dao.*;
 import com.spring.lambda.dao.impl.Close;
 import com.spring.lambda.dao.impl.Open;
 import com.spring.lambda.dao.impl.Save;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import lombok.extern.log4j.Log4j2;
+import lombok.var;
+import org.apache.commons.lang3.CharSetUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,11 +20,12 @@ import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -127,11 +134,43 @@ public class test {
         IntSummaryStatistics intSummaryStatistics = stringList.stream().mapToInt(Integer::parseInt).peek(logger -> {
             log.info("-------" + logger);
         }).summaryStatistics();
+
         log.info("getMax ---: " + intSummaryStatistics.getMax());
         log.info("getMin ---: " + intSummaryStatistics.getMin());
         log.info("getAverage ---: " + intSummaryStatistics.getAverage());
         log.info("getCount ---: " + intSummaryStatistics.getCount());
         log.info("getSum ---: " + intSummaryStatistics.getSum());
+    }
+
+    @Test
+    public void readFile(){
+        File file = new File("C:\\Users\\niici\\Desktop\\新建文本文档.txt");
+        log.info(file.getName());
+        log.info(file.getPath());
+        Long filelength =  file.length();
+        long  seventoten = Integer.valueOf("111",7); // 7进制转10进制，输出结果为57 7*7+7+1
+        log.info(seventoten);
+        try {
+            // 一次性读取
+            byte[] context = new byte[filelength.intValue()];
+            FileInputStream fileInputStream = new FileInputStream(file);
+            fileInputStream.read(context);
+            fileInputStream.close();
+            System.out.println(new String(context, "UTF-8"));
+            for (int i = 0; i < 10; i++) {
+                log.info(String.valueOf(new Random().nextInt(10)+1));
+            }
+            // 循环读取，每次读取一条
+          /*  FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while((line = br.readLine()) != null){
+                log.info(line);
+            }*/
+        } catch (IOException e) {
+            log.error(e.getMessage(),e);
+        }
+
     }
 
     /**
@@ -177,7 +216,6 @@ public class test {
         Assert.assertEquals("a", a.get());
         // isPresent 方法用于判断 optional 对象 是否不为空
         Assert.assertFalse(emptyOptional.isPresent());
-
         Assert.assertTrue(alseEmpty.isPresent());
         // ifPresent 用于判断值是否为空,并且执行一个lambda表达式,接口类型为 Consumer ,即 void 没有返回值
         alseEmpty.ifPresent(u -> log.info(a.get()));
@@ -322,5 +360,19 @@ public class test {
         });
         moon.land("human");
         moon.land("lambda");
+    }
+
+    // 通过 建造者（build）模式创建对象
+    @Test
+    public void test111(){
+        NutritionFacts nutritionFacts = new NutritionFacts.Builder(280, 11).fat(0).build();
+        log.info(JSONObject.toJSON(nutritionFacts));
+        Elvis elvis = Elvis.INSTANCE;
+        Elvis elvis2 = Elvis.INSTANCE;
+        System.out.println(elvis == elvis2);
+
+        Elvis2 instance = Elvis2.getInstance();
+        Elvis2 instance2 = Elvis2.getInstance();
+        System.out.println(instance == instance2);
     }
 }

@@ -5142,7 +5142,7 @@
     </column>
     <column id="988" parent="274" name="change_type">
       <Position>6</Position>
-      <Comment>类型 0 未开通 1 开通 </Comment>
+      <Comment>类型 0 未开通 1 开通</Comment>
       <DataType>int(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
