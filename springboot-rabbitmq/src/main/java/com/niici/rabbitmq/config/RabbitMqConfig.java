@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * rabbitmq交换机、队列、绑定关系配置类
  * 当使用@rabbitmqListener注解时，会自动生成交换机、队列、和绑定关系，如Listener类
@@ -46,7 +49,6 @@ public class RabbitMqConfig {
      */
     @Bean
     public Queue simpleQueue() {
-        // new Queue构造方法默认durable为true
         return new Queue("niici.simple.queue");
     }
 
@@ -82,7 +84,17 @@ public class RabbitMqConfig {
 
     @Bean
     public Queue topicQueue() {
-        return new Queue("niici.topic.queue");
+        // new Queue构造方法默认durable为true
+        HashMap<String, Object> args = new HashMap();
+        // 设置队列中消息的过期时间, 单位为毫秒
+        args.put("x-message-ttl", 5000);
+        // 设置死信交换机
+        // 进入死信队列的三种场景：消息被拒绝、消息过期、队列达到最大长度
+        // 队列把消息发给死信交换机, 交换机再通过不同的routingKey, 将消息分发到不同的队列中
+        args.put("x-dead-letter-exchange", "niici.dead.exchange");
+        // 队列名称、是否持久化、是否独占、是否自动删除
+        //return new Queue("niici.simple.queue", true, false, false, args);
+        return new Queue("niici.topic.queue", true, false, false, args);
     }
 
     @Bean

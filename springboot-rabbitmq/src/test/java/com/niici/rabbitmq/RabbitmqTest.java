@@ -2,7 +2,10 @@ package com.niici.rabbitmq;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -86,9 +89,28 @@ public class RabbitmqTest {
             amqpTemplate.convertAndSend("niici.topic.exchange", "user.insert", "user 新增成功");
             amqpTemplate.convertAndSend("niici.topic.exchange", "student.delete", "student 删除成功");
             amqpTemplate.convertAndSend("niici.topic.exchange", "student.insert", "student 新增成功");
+            amqpTemplate.convertAndSend("niici.topic.exchange", "student.insert", "student 过期新增成功",
+                    message -> {
+                        message.getMessageProperties().setExpiration("2000");
+                        return message;
+                    });
             /*amqpTemplate.convertAndSend("niici.direct.exchange","niici.insert","新增成功");
             amqpTemplate.convertAndSend("niici.direct.exchange","niici.update","修改成功");*/
             //Thread.sleep(5000);
         }
+    }
+
+    /**
+     * topic 消息模型发送消息
+     *
+     * @throws InterruptedException
+     */
+    @Test
+    public void topicTTL() throws InterruptedException {
+        amqpTemplate.convertAndSend("niici.topic.exchange", "topic.insert", "student 过期新增成功",
+                message -> {
+                    message.getMessageProperties().setExpiration("2000");
+                    return message;
+                });
     }
 }
