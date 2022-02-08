@@ -22,8 +22,9 @@ public class RabbitmqTest {
     public void simple() throws InterruptedException {
         String msg = "Rabbitmq simple ....";
         for (int i = 0; i < 10; i++) {
-            amqpTemplate.convertAndSend("niici.create.simple.queue", msg);
-            Thread.sleep(5000);
+            amqpTemplate.convertAndSend("niici.simple.queue", msg);
+            amqpTemplate.convertAndSend("niici.simple.queue2", msg+i);
+            Thread.sleep(1000);
         }
     }
 
@@ -36,8 +37,8 @@ public class RabbitmqTest {
     public void work() throws InterruptedException {
         String msg = "Rabbitmq work ....";
         for (int i = 0; i < 10; i++) {
-            amqpTemplate.convertAndSend("niici.create.work.queue", msg + i);
-
+            amqpTemplate.convertAndSend("niici.work.queue", msg + i);
+            Thread.sleep(1000);
         }
     }
 
@@ -51,8 +52,7 @@ public class RabbitmqTest {
         String msg = "Rabbitmq fanout ....";
         for (int i = 0; i < 10; i++) {
             //广播消息模型是所有队列都能接收到的，所以没有 routeKey，即 为空
-            amqpTemplate.convertAndSend("niici.fanout.exchange", "fanout.#", msg + i);
-
+            amqpTemplate.convertAndSend("niici.fanout.exchange", "", msg + i);
             Thread.sleep(5000);
         }
     }
@@ -68,7 +68,7 @@ public class RabbitmqTest {
             //direct消息模型是所有队列都能接收到的，所以没有 routeKey，即 为空
             amqpTemplate.convertAndSend("niici.direct.exchange", "delete", "删除成功");
             amqpTemplate.convertAndSend("niici.direct.exchange", "insert", "新增成功");
-            amqpTemplate.convertAndSend("niici.direct.exchange", "update", "修改成功");
+            //amqpTemplate.convertAndSend("niici.direct.exchange", "update", "修改成功");
             Thread.sleep(5000);
         }
     }
@@ -82,12 +82,13 @@ public class RabbitmqTest {
     @Test
     public void topic() throws InterruptedException {
         for (int i = 0; i < 10; i++) {
-            //广播消息模型是所有队列都能接收到的，所以没有 routeKey，即 为空
             amqpTemplate.convertAndSend("niici.topic.exchange", "user.delete", "user 删除成功");
+            amqpTemplate.convertAndSend("niici.topic.exchange", "user.insert", "user 新增成功");
             amqpTemplate.convertAndSend("niici.topic.exchange", "student.delete", "student 删除成功");
-            amqpTemplate.convertAndSend("niici.direct.exchange","niici.insert","新增成功");
-            amqpTemplate.convertAndSend("niici.direct.exchange","niici.update","修改成功");
-            Thread.sleep(5000);
+            amqpTemplate.convertAndSend("niici.topic.exchange", "student.insert", "student 新增成功");
+            /*amqpTemplate.convertAndSend("niici.direct.exchange","niici.insert","新增成功");
+            amqpTemplate.convertAndSend("niici.direct.exchange","niici.update","修改成功");*/
+            //Thread.sleep(5000);
         }
     }
 }

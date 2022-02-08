@@ -37,7 +37,37 @@ public class RabbitMqConfig {
      */
     @Bean
     public Exchange topicExchange() {
-        return ExchangeBuilder.directExchange("niici.topic.exchange").durable(true).build();
+        return ExchangeBuilder.topicExchange("niici.topic.exchange").durable(true).build();
+    }
+
+    /**
+     * 声明基本类型的队列
+     * @return
+     */
+    @Bean
+    public Queue simpleQueue() {
+        // new Queue构造方法默认durable为true
+        return new Queue("niici.simple.queue");
+    }
+
+    /**
+     * 声明基本类型的队列
+     * @return
+     */
+    @Bean
+    public Queue simpleQueue2() {
+        // new Queue构造方法默认durable为true
+        return new Queue("niici.simple.queue2");
+    }
+
+    /**
+     * 声明基本类型的队列
+     * @return
+     */
+    @Bean
+    public Queue workQueue() {
+        // new Queue构造方法默认durable为true
+        return new Queue("niici.work.queue");
     }
 
     @Bean

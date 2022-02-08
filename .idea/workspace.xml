@@ -4,119 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot-day1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-day1/src/main/java/com/niici/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-day1/src/main/java/com/niici/bean/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-day1/src/main/java/com/niici/bean/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-day1/src/main/java/com/niici/config/DemoConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-day1/src/main/java/com/niici/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-day1/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/bean/Elvis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/bean/Elvis2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/bean/NutritionFacts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-lambda/src/main/java/com/spring/lambda/bean/Pizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/541f09a2-4c89-4cf9-ada8-75d24ac58912.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/541f09a2-4c89-4cf9-ada8-75d24ac58912.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. rabbitmq复习，明天继续">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/advice/DaoAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-aop/src/main/java/com/spring/aop/advice/DaoAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-elasticsearch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-elasticsearch/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-httpClient/src/test/java/com/spring/httpClient/test/HttpClientLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-httpClient/src/test/java/com/spring/httpClient/test/HttpClientLearn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-lambda/src/test/java/com/spring/lambda/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-lambda/src/test/java/com/spring/lambda/test/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-lambda/target/test-classes/com/spring/lambda/test/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-lambda/target/test-classes/com/spring/lambda/test/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-poi/src/main/java/com/spring/easypoi/controller/EasyPoiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/Centos7安装rabbitmq.md" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/Centos7安装rabbitmq.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527063872737.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527063872737.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527063976617.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527063976617.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064480681.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527064480681.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064487042.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527064487042.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064606029.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527064606029.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064762982.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527064762982.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064881869.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527064881869.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527065024587.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527065024587.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527065157430.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527065157430.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066149086.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527066149086.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066164552.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527066164552.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066205405.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527066205405.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066255320.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527066255320.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066694704.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527066694704.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527067075616.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527067075616.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527067448840.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527067448840.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068070427.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527068070427.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068172958.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527068172958.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068230315.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527068230315.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068380737.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527068380737.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068544487.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527068544487.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527070384668.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527070384668.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527070619131.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527070619131.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072505530.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527072505530.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072699034.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527072699034.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072746634.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527072746634.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072874080.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527072874080.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072947108.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527072947108.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527073500352.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527073500352.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527078437166.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527078437166.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527085386747.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527085386747.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527085448377.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527085448377.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527085826462.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527085826462.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086103576.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527086103576.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086159534.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527086159534.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086284940.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527086284940.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086564505.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527086564505.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527087071693.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527087071693.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527087677192.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527087677192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088296131.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527088296131.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088518574.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527088518574.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088933255.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527088933255.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088960059.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527088960059.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088984029.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527088984029.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527089338661.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527089338661.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527089365281.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527089365281.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527089407483.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527089407483.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527090258083.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527090258083.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527090414110.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527090414110.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527090513200.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527090513200.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527156169187.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527156169187.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527156211012.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527156211012.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527164231784.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527164231784.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527164472745.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527164472745.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527164971474.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527164971474.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165003173.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165003173.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165040632.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165040632.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165091338.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165091338.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165112725.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165112725.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165286619.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165286619.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165323776.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165323776.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165345197.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527165345197.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527166160735.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527166160735.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527166183985.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527166183985.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527166202112.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/1527166202112.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/clip_image001-1527067240682.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/clip_image001-1527067240682.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/clip_image001.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/clip_image001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/rabbit下载和安装帮助文档.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/rabbit下载和安装帮助文档.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/安装erlang成功图片.png" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/assets/安装erlang成功图片.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/rabbitmq-server-3.4.1-1.noarch.rpm" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/rabbitmq/rabbitmq-server-3.4.1-1.noarch.rpm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/RabbitMQApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/src/main/java/com/spring/rabbitmq/RabbitMQApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/listener/RabbitMqListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/src/main/java/com/spring/rabbitmq/listener/RabbitMqListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/src/main/java/com/spring/rabbitmq/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/spring/rabbitmq/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/src/main/java/com/spring/rabbitmq/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq-old/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/spring/rabbitmq/test/RabbitmqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq-old/src/test/java/com/spring/rabbitmq/test/RabbitmqTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-redis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/RedisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/spring/redis/RedisApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-redis/src/test/java/com/spring/redis/test/RedisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-redis/src/test/java/com/spring/redis/test/RedisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-redis/target/classes/com/spring/redis/RedisApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-redis/target/classes/com/spring/redis/RedisApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-security-jwt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-security-jwt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,12 +329,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootRabbitmqApplication">
+  <component name="RunManager" selected="JUnit.RabbitmqTest.topic">
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitmqTest.direct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-rabbitmq" />
+      <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
+      <option name="METHOD_NAME" value="direct" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -465,27 +369,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitmqTest.simple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot-rabbitmq-old" />
-      <option name="PACKAGE_NAME" value="com.spring.rabbitmq.test" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.rabbitmq.test.RabbitmqTest" />
-      <option name="METHOD_NAME" value="simple" />
+    <configuration name="RabbitmqTest.topic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-rabbitmq" />
+      <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
+      <option name="METHOD_NAME" value="topic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test.test111" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot-lambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spring.lambda.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.spring.lambda.test" />
-      <option name="MAIN_CLASS_NAME" value="com.spring.lambda.test.test" />
-      <option name="METHOD_NAME" value="test111" />
+    <configuration name="RabbitmqTest.work" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-rabbitmq" />
+      <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
+      <option name="METHOD_NAME" value="work" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -591,13 +489,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="springbootsecurityjwt" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.security.SecurityApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShiroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sprintboot-shiro" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.shiro.ShiroApplication" />
@@ -627,7 +518,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.test.test111" />
+      <item itemvalue="JUnit.RabbitmqTest.simple (1)" />
+      <item itemvalue="JUnit.RabbitmqTest.fanout" />
       <item itemvalue="Spring Boot.AspectJApplication (1)" />
       <item itemvalue="Spring Boot.AspectJApplication" />
       <item itemvalue="Spring Boot.DemoApplication" />
@@ -644,20 +536,19 @@
       <item itemvalue="Spring Boot.ShiroApplication" />
       <item itemvalue="Spring Boot.TaskApplication" />
       <item itemvalue="Spring Boot.WebSocketApplicaiton" />
-      <item itemvalue="Spring Boot.SecurityApplication" />
-      <item itemvalue="JUnit.RabbitmqTest.simple" />
       <item itemvalue="Spring Boot.RabbitmqApplication" />
       <item itemvalue="Spring Boot.SpringbootRabbitmqApplication" />
-      <item itemvalue="JUnit.RabbitmqTest.simple (1)" />
-      <item itemvalue="JUnit.RabbitmqTest.fanout" />
+      <item itemvalue="JUnit.RabbitmqTest.work" />
+      <item itemvalue="JUnit.RabbitmqTest.direct" />
+      <item itemvalue="JUnit.RabbitmqTest.topic" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RabbitmqTest.topic" />
+        <item itemvalue="JUnit.RabbitmqTest.direct" />
         <item itemvalue="JUnit.RabbitmqTest.fanout" />
+        <item itemvalue="JUnit.RabbitmqTest.work" />
         <item itemvalue="JUnit.RabbitmqTest.simple (1)" />
-        <item itemvalue="JUnit.RabbitmqTest.simple" />
-        <item itemvalue="Spring Boot.SecurityApplication" />
-        <item itemvalue="JUnit.test.test111" />
       </list>
     </recent_temporary>
   </component>
@@ -757,8 +648,17 @@
       <workItem from="1626265304641" duration="6608000" />
       <workItem from="1627267754989" duration="732000" />
       <workItem from="1627832049997" duration="1005000" />
-      <workItem from="1644238745939" duration="5123000" />
+      <workItem from="1644238745939" duration="5210000" />
+      <workItem from="1644320008654" duration="6758000" />
     </task>
+    <task id="LOCAL-00001" summary="1. rabbitmq复习，明天继续">
+      <created>1644243962909</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644243962909</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -880,6 +780,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. rabbitmq复习，明天继续" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. rabbitmq复习，明天继续" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

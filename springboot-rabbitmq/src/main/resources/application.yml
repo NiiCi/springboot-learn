@@ -22,3 +22,5 @@ spring:
       simple:
         acknowledge-mode: manual
     publisher-confirm-type: simple
+    # 消息发送失败时，返回到队列
+    publisher-returns: true
