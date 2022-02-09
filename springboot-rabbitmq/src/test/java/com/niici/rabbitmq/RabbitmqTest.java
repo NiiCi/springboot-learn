@@ -106,11 +106,14 @@ public class RabbitmqTest {
      * @throws InterruptedException
      */
     @Test
-    public void topicTTL() throws InterruptedException {
-        amqpTemplate.convertAndSend("niici.topic.exchange", "topic.insert", "student 过期新增成功",
-                message -> {
-                    message.getMessageProperties().setExpiration("2000");
-                    return message;
-                });
+    public void dead() throws InterruptedException {
+        for (int i = 0; i < 10; i++) {
+            amqpTemplate.convertAndSend("niici.topic.exchange", "topic.insert", "student 过期新增成功",
+                    message -> {
+                        message.getMessageProperties().setExpiration("5000");
+                        return message;
+                    });
+            Thread.sleep(5000);
+        }
     }
 }

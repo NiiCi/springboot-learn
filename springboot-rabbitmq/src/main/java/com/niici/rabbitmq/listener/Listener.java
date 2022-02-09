@@ -150,5 +150,63 @@ public class Listener {
         System.out.println("topic接收到消息：" + msg);
     }
 
+    /**
+     * 队列达到最大长度时，死信队列监听
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
+    /*@RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.dead.queue", durable = "true"),
+                    exchange = @Exchange(
+                            value = "niici.dead.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.TOPIC
+                    ),
+                    key = {"dead.#"}))
+    @RabbitHandler
+    public void deadListen1(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("队列达到最大长度死信队列监听到消息: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }*/
+
+    /**
+     * 消息超时时，死信队列监听
+     * 拒绝消息场景就是再写一个topic监听器监听topic.#路由key的消息, 调用channel.basicNack方法
+     * 延迟队列就是死信队列中的消息超时场景, 如超时订单自动关闭的实现
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
+    @RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.dead.queue", durable = "true"),
+                    exchange = @Exchange(
+                            value = "niici.dead.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.TOPIC
+                    ),
+                    key = {"dead.#"}))
+    @RabbitHandler
+    public void deadListen2(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("消息超时场景死信队列监听到消息: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }
+
 
 }

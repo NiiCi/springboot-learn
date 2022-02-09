@@ -22,7 +22,7 @@ public class RabbitMqConfig {
     @Bean
     public Exchange fanoutExchange() {
         // durable 配置交换机持久化
-        return ExchangeBuilder.directExchange("niici.fanout.exchange").durable(true).build();
+        return ExchangeBuilder.fanoutExchange("niici.fanout.exchange").durable(true).build();
     }
 
     /**
@@ -41,6 +41,15 @@ public class RabbitMqConfig {
     @Bean
     public Exchange topicExchange() {
         return ExchangeBuilder.topicExchange("niici.topic.exchange").durable(true).build();
+    }
+
+    /**
+     * 配置死信交换机
+     * @return
+     */
+    @Bean
+    public Exchange deadExchange() {
+        return ExchangeBuilder.topicExchange("niici.dead.exchange").durable(true).build();
     }
 
     /**
@@ -88,31 +97,50 @@ public class RabbitMqConfig {
         HashMap<String, Object> args = new HashMap();
         // 设置队列中消息的过期时间, 单位为毫秒
         args.put("x-message-ttl", 5000);
+        // 指定队列最大长度
+        //args.put("x-max-length", 2);
         // 设置死信交换机
         // 进入死信队列的三种场景：消息被拒绝、消息过期、队列达到最大长度
         // 队列把消息发给死信交换机, 交换机再通过不同的routingKey, 将消息分发到不同的队列中
         args.put("x-dead-letter-exchange", "niici.dead.exchange");
+        // 指定死信队列的路由key
+        args.put("x-dead-letter-routing-key", "dead.test");
         // 队列名称、是否持久化、是否独占、是否自动删除
         //return new Queue("niici.simple.queue", true, false, false, args);
         return new Queue("niici.topic.queue", true, false, false, args);
     }
 
+    /**
+     * 定义一个死信队列
+     * @return
+     */
+    @Bean
+    public Queue deadQueue() {
+        return new Queue("niici.dead.queue");
+    }
+
     @Bean
     public Binding fanoutQueueBind(@Qualifier("fanoutQueue") Queue queue, @Qualifier("fanoutExchange") Exchange exchange) {
         // 将队列绑定到指定的交换机上, 并指定路由key
-        return BindingBuilder.bind(queue).to(exchange).with("fanout.#").noargs();
+        return BindingBuilder.bind(queue).to(exchange).with("#.#").noargs();
     }
 
     @Bean
     public Binding directQueueBind(@Qualifier("directQueue") Queue queue, @Qualifier("directExchange") Exchange exchange) {
         // 将队列绑定到指定的交换机上, 并指定路由key
-        return BindingBuilder.bind(queue).to(exchange).with("direct.#").noargs();
+        return BindingBuilder.bind(queue).to(exchange).with("direct").noargs();
     }
 
     @Bean
     public Binding topicQueueBind(@Qualifier("topicQueue") Queue queue, @Qualifier("topicExchange") Exchange exchange) {
         // 将队列绑定到指定的交换机上, 并指定路由key
         return BindingBuilder.bind(queue).to(exchange).with("topic.#").noargs();
+    }
+
+    @Bean
+    public Binding deadQueueBind(@Qualifier("deadQueue") Queue queue, @Qualifier("deadExchange") Exchange exchange) {
+        // 将队列绑定到指定的交换机上, 并指定路由key
+        return BindingBuilder.bind(queue).to(exchange).with("dead.#").noargs();
     }
 }
 
