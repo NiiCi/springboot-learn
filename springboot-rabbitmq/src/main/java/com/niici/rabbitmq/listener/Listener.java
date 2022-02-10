@@ -187,6 +187,58 @@ public class Listener {
      * @param message
      * @throws IOException
      */
+/*    @RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.dead.queue", durable = "true"),
+                    exchange = @Exchange(
+                value = "niici.dead.exchange",
+                ignoreDeclarationExceptions = "true",
+                type = ExchangeTypes.TOPIC
+        ),
+        key = {"dead.#"}))
+        @RabbitHandler
+        public void deadListen2(String msg, Channel channel, Message message) throws IOException {
+            // 消息在队列中对应的索引
+            long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("消息超时场景死信队列监听到消息: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }*/
+
+
+    @RabbitListener(
+            bindings = @QueueBinding(
+                    // niici.topic.queue在config中已经配置, 使用@RabbitListener注解监听时, 会再创建一次queue
+                    // 使用ignoreDeclarationExceptions = true 忽略声明异常
+                    value = @Queue(value = "niici.topic.queue", durable = "true" , ignoreDeclarationExceptions = "true"),
+                    exchange = @Exchange(
+                            value = "niici.topic.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.TOPIC
+                    ),
+                    key = {"topic.nack"}))
+    @RabbitHandler
+    public void topicListen4DeadNack(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("测试消息拒收监听器接收到消息：" + msg);
+            channel.basicNack(deliveryTag, false, true);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }
+
+    /**
+     * 消息被拒收时，死信队列监听
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
     @RabbitListener(
             bindings = @QueueBinding(
                     value = @Queue(value = "niici.dead.queue", durable = "true"),
@@ -197,16 +249,14 @@ public class Listener {
                     ),
                     key = {"dead.#"}))
     @RabbitHandler
-    public void deadListen2(String msg, Channel channel, Message message) throws IOException {
+    public void deadListen3(String msg, Channel channel, Message message) throws IOException {
         // 消息在队列中对应的索引
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
         try {
-            System.out.println("消息超时场景死信队列监听到消息: " + msg);
+            System.out.println("消息被拒收场景死信队列监听到消息: " + msg);
             channel.basicAck(deliveryTag, false);
         } catch (IOException e) {
             channel.basicNack(deliveryTag, false, true);
         }
     }
-
-
 }

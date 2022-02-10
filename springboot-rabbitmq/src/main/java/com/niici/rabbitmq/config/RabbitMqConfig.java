@@ -89,14 +89,15 @@ public class RabbitMqConfig {
 
     @Bean
     public Queue directQueue() {
-        return new Queue("niici.direct.queue");    }
+        return new Queue("niici.direct.queue");
+    }
 
     @Bean
     public Queue topicQueue() {
         // new Queue构造方法默认durable为true
         HashMap<String, Object> args = new HashMap();
         // 设置队列中消息的过期时间, 单位为毫秒
-        args.put("x-message-ttl", 5000);
+        // args.put("x-message-ttl", 4000);
         // 指定队列最大长度
         //args.put("x-max-length", 2);
         // 设置死信交换机
@@ -106,7 +107,6 @@ public class RabbitMqConfig {
         // 指定死信队列的路由key
         args.put("x-dead-letter-routing-key", "dead.test");
         // 队列名称、是否持久化、是否独占、是否自动删除
-        //return new Queue("niici.simple.queue", true, false, false, args);
         return new Queue("niici.topic.queue", true, false, false, args);
     }
 

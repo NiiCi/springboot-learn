@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 新增如何设置队列中消息的过期时间&#10;2. 设置死信队列。">
+    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" afterDir="false" />
@@ -327,7 +327,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RabbitmqTest.dead">
+  <component name="RunManager" selected="JUnit.RabbitmqTest.deadNack">
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -347,21 +347,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitmqTest.direct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitmqTest.deadNack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-rabbitmq" />
       <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
       <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
-      <option name="METHOD_NAME" value="direct" />
+      <option name="METHOD_NAME" value="deadNack" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitmqTest.fanout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitmqTest.deadTTL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-rabbitmq" />
       <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
       <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
-      <option name="METHOD_NAME" value="fanout" />
+      <option name="METHOD_NAME" value="deadTTL" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -516,10 +516,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.RabbitmqTest.fanout" />
-      <item itemvalue="JUnit.RabbitmqTest.direct" />
       <item itemvalue="JUnit.RabbitmqTest.topic" />
       <item itemvalue="JUnit.RabbitmqTest.topicTTL" />
+      <item itemvalue="JUnit.RabbitmqTest.dead" />
+      <item itemvalue="JUnit.RabbitmqTest.deadNack" />
+      <item itemvalue="JUnit.RabbitmqTest.deadTTL" />
       <item itemvalue="Spring Boot.AspectJApplication (1)" />
       <item itemvalue="Spring Boot.AspectJApplication" />
       <item itemvalue="Spring Boot.DemoApplication" />
@@ -538,15 +539,14 @@
       <item itemvalue="Spring Boot.WebSocketApplicaiton" />
       <item itemvalue="Spring Boot.RabbitmqApplication" />
       <item itemvalue="Spring Boot.SpringbootRabbitmqApplication" />
-      <item itemvalue="JUnit.RabbitmqTest.dead" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RabbitmqTest.deadNack" />
+        <item itemvalue="JUnit.RabbitmqTest.topic" />
+        <item itemvalue="JUnit.RabbitmqTest.deadTTL" />
         <item itemvalue="JUnit.RabbitmqTest.dead" />
         <item itemvalue="JUnit.RabbitmqTest.topicTTL" />
-        <item itemvalue="JUnit.RabbitmqTest.topic" />
-        <item itemvalue="JUnit.RabbitmqTest.direct" />
-        <item itemvalue="JUnit.RabbitmqTest.fanout" />
       </list>
     </recent_temporary>
   </component>
@@ -648,7 +648,10 @@
       <workItem from="1627832049997" duration="1005000" />
       <workItem from="1644238745939" duration="5210000" />
       <workItem from="1644320008654" duration="10137000" />
-      <workItem from="1644414058902" duration="3427000" />
+      <workItem from="1644414058902" duration="5285000" />
+      <workItem from="1644493060800" duration="1846000" />
+      <workItem from="1644495147160" duration="1041000" />
+      <workItem from="1644496210752" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="1. rabbitmq复习，明天继续">
       <created>1644243962909</created>
@@ -671,7 +674,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644329639308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列">
+      <created>1644417516067</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644417516067</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -798,7 +808,8 @@
     <MESSAGE value="1. rabbitmq复习，明天继续" />
     <MESSAGE value="1. springboot+rabbitmq单机版本完结。&#10;2. 新增如何手动ACK确认消息。" />
     <MESSAGE value="1. 新增如何设置队列中消息的过期时间&#10;2. 设置死信队列。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 新增如何设置队列中消息的过期时间&#10;2. 设置死信队列。" />
+    <MESSAGE value="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

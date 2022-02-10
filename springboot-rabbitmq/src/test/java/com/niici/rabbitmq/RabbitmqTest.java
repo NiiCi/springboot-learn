@@ -101,19 +101,43 @@ public class RabbitmqTest {
     }
 
     /**
-     * topic 消息模型发送消息
+     * 消息超时场景死信队列测试
      *
      * @throws InterruptedException
      */
     @Test
-    public void dead() throws InterruptedException {
+    public void deadTTL() throws InterruptedException {
         for (int i = 0; i < 10; i++) {
-            amqpTemplate.convertAndSend("niici.topic.exchange", "topic.insert", "student 过期新增成功",
+            amqpTemplate.convertAndSend("niici.topic.exchange", "topic.ttl", "超时场景消息发送成功",
                     message -> {
                         message.getMessageProperties().setExpiration("5000");
                         return message;
                     });
             Thread.sleep(5000);
+        }
+    }
+
+    /**
+     * 队列达到最大长度场景死信队列测试
+     *
+     * @throws InterruptedException
+     */
+    @Test
+    public void deadMaxLength() {
+        for (int i = 0; i < 10; i++) {
+            amqpTemplate.convertAndSend("niici.topic.exchange", "topic.max", "队列达到最大长度场景消息发送成功");
+        }
+    }
+
+    /**
+     * 消息被拒收场景死信队列测试
+     *
+     * @throws InterruptedException
+     */
+    @Test
+    public void deadNack() {
+        for (int i = 0; i < 10; i++) {
+            amqpTemplate.convertAndSend("niici.topic.exchange", "topic.nack", "消息被拒收场景消息发送成功");
         }
     }
 }
