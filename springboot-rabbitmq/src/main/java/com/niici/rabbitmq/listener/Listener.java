@@ -213,7 +213,7 @@ public class Listener {
             bindings = @QueueBinding(
                     // niici.topic.queue在config中已经配置, 使用@RabbitListener注解监听时, 会再创建一次queue
                     // 使用ignoreDeclarationExceptions = true 忽略声明异常
-                    value = @Queue(value = "niici.topic.queue", durable = "true" , ignoreDeclarationExceptions = "true"),
+                    value = @Queue(value = "niici.topic.queue", durable = "true", ignoreDeclarationExceptions = "true"),
                     exchange = @Exchange(
                             value = "niici.topic.exchange",
                             ignoreDeclarationExceptions = "true",
@@ -254,6 +254,34 @@ public class Listener {
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
         try {
             System.out.println("消息被拒收场景死信队列监听到消息: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }
+
+    /**
+     * 基于插件的延迟队列监听
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
+    @RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.delay.queue", durable = "true", ignoreDeclarationExceptions = "true"),
+                    exchange = @Exchange(
+                            value = "niici.delay.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.TOPIC
+                    ),
+                    key = {"delay.#"}))
+    @RabbitHandler
+    public void delayListen(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("基于插件的延迟队列监听器到消息: " + msg);
             channel.basicAck(deliveryTag, false);
         } catch (IOException e) {
             channel.basicNack(deliveryTag, false, true);

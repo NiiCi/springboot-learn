@@ -109,6 +109,10 @@ public class RabbitmqTest {
     public void deadTTL() throws InterruptedException {
         for (int i = 0; i < 10; i++) {
             amqpTemplate.convertAndSend("niici.topic.exchange", "topic.ttl", "超时场景消息发送成功",
+                    /**
+                     * 给消息设置超时时间的问题：
+                     * Rabbitmq只会检查第一个消息是否过期, 如果第一个消息超时时间较长，第二个消息超时时间较短，则不能实现第二个消息先执行超时，导致消息堆积。
+                     */
                     message -> {
                         message.getMessageProperties().setExpiration("5000");
                         return message;
@@ -139,5 +143,28 @@ public class RabbitmqTest {
         for (int i = 0; i < 10; i++) {
             amqpTemplate.convertAndSend("niici.topic.exchange", "topic.nack", "消息被拒收场景消息发送成功");
         }
+    }
+
+    /**
+     * 基于插件的延迟队列测试
+     *
+     * @throws InterruptedException
+     */
+    @Test
+    public void delay() throws InterruptedException {
+        /**
+         * 创建两条延迟消息，一条设置5s超时时间，一条设置1s，测试是否1s的消息先被监听到
+         */
+        amqpTemplate.convertAndSend("niici.delay.exchange", "delay.five", "超时时间5s的消息", message -> {
+            message.getMessageProperties().setDelay(5000);
+            return message;
+        });
+
+        amqpTemplate.convertAndSend("niici.delay.exchange", "delay.one", "超时时间1s的消息", message -> {
+            message.getMessageProperties().setDelay(1000);
+            return message;
+        });
+        // 消息发送完成后, 等待10s, 让监听器去监听, 在控制台打印结果
+        Thread.sleep(10000);
     }
 }

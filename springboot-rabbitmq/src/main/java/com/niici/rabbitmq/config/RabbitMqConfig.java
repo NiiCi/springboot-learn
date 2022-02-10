@@ -53,6 +53,19 @@ public class RabbitMqConfig {
     }
 
     /**
+     * 配置延迟交换机
+     * @return
+     */
+    @Bean
+    public CustomExchange delayExchange() {
+        // CustomExchange 允许自定义交换机类型
+        HashMap<String, Object> args = new HashMap<>();
+        // 指定延迟队列的类型
+        args.put("x-delayed-type", "topic");
+        return new CustomExchange("niici.delay.exchange", "x-delayed-message", true, false, args);
+    }
+
+    /**
      * 声明基本类型的队列
      * @return
      */
@@ -119,6 +132,15 @@ public class RabbitMqConfig {
         return new Queue("niici.dead.queue");
     }
 
+    /**
+     * 定义一个延迟队列
+     * @return
+     */
+    @Bean
+    public Queue delayQueue() {
+        return new Queue("niici.delay.queue");
+    }
+
     @Bean
     public Binding fanoutQueueBind(@Qualifier("fanoutQueue") Queue queue, @Qualifier("fanoutExchange") Exchange exchange) {
         // 将队列绑定到指定的交换机上, 并指定路由key
@@ -141,6 +163,12 @@ public class RabbitMqConfig {
     public Binding deadQueueBind(@Qualifier("deadQueue") Queue queue, @Qualifier("deadExchange") Exchange exchange) {
         // 将队列绑定到指定的交换机上, 并指定路由key
         return BindingBuilder.bind(queue).to(exchange).with("dead.#").noargs();
+    }
+
+    @Bean
+    public Binding delayQueueBind(@Qualifier("delayQueue") Queue queue, @Qualifier("delayExchange") Exchange exchange) {
+        // 将队列绑定到指定的交换机上, 并指定路由key
+        return BindingBuilder.bind(queue).to(exchange).with("delay.#").noargs();
     }
 }
 

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列">
+    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。">
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" afterDir="false" />
@@ -280,7 +283,7 @@
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-rabbitmq/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-rabbitmq" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -303,11 +306,11 @@
       <recent name="com.spring.aop.dao.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\springboot-learn\springboot-rabbitmq" />
       <recent name="D:\projects\springboot-learn\springboot-rabbitmq\src\main\resources" />
       <recent name="D:\projects\springboot-learn\springboot-lambda\src\test\java\com\spring\lambda\test" />
       <recent name="F:\springboot-learn\docker-learn\docker" />
       <recent name="F:\springboot-learn\springboot-security-jwt\src\main\resources\templates" />
-      <recent name="F:\springboot-learn\springboot-security-jwt\src\main\java\com\spring\security\authentication" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\springboot-learn\docker-learn\docker" />
@@ -327,7 +330,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RabbitmqTest.deadNack">
+  <component name="RunManager" selected="JUnit.RabbitmqTest.delay">
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -367,21 +370,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitmqTest.topic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitmqTest.delay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-rabbitmq" />
       <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
       <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
-      <option name="METHOD_NAME" value="topic" />
+      <option name="METHOD_NAME" value="delay" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitmqTest.topicTTL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitmqTest.topic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-rabbitmq" />
       <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
       <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
-      <option name="METHOD_NAME" value="topicTTL" />
+      <option name="METHOD_NAME" value="topic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -517,7 +520,6 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.RabbitmqTest.topic" />
-      <item itemvalue="JUnit.RabbitmqTest.topicTTL" />
       <item itemvalue="JUnit.RabbitmqTest.dead" />
       <item itemvalue="JUnit.RabbitmqTest.deadNack" />
       <item itemvalue="JUnit.RabbitmqTest.deadTTL" />
@@ -539,14 +541,15 @@
       <item itemvalue="Spring Boot.WebSocketApplicaiton" />
       <item itemvalue="Spring Boot.RabbitmqApplication" />
       <item itemvalue="Spring Boot.SpringbootRabbitmqApplication" />
+      <item itemvalue="JUnit.RabbitmqTest.delay" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RabbitmqTest.deadNack" />
+        <item itemvalue="JUnit.RabbitmqTest.delay" />
         <item itemvalue="JUnit.RabbitmqTest.topic" />
+        <item itemvalue="JUnit.RabbitmqTest.deadNack" />
         <item itemvalue="JUnit.RabbitmqTest.deadTTL" />
         <item itemvalue="JUnit.RabbitmqTest.dead" />
-        <item itemvalue="JUnit.RabbitmqTest.topicTTL" />
       </list>
     </recent_temporary>
   </component>
@@ -651,7 +654,7 @@
       <workItem from="1644414058902" duration="5285000" />
       <workItem from="1644493060800" duration="1846000" />
       <workItem from="1644495147160" duration="1041000" />
-      <workItem from="1644496210752" duration="705000" />
+      <workItem from="1644496210752" duration="5646000" />
     </task>
     <task id="LOCAL-00001" summary="1. rabbitmq复习，明天继续">
       <created>1644243962909</created>
@@ -681,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644417516067</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。">
+      <created>1644496959754</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644496959754</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -809,7 +819,8 @@
     <MESSAGE value="1. springboot+rabbitmq单机版本完结。&#10;2. 新增如何手动ACK确认消息。" />
     <MESSAGE value="1. 新增如何设置队列中消息的过期时间&#10;2. 设置死信队列。" />
     <MESSAGE value="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列" />
+    <MESSAGE value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
