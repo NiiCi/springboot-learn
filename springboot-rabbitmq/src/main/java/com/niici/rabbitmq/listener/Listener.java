@@ -287,4 +287,32 @@ public class Listener {
             channel.basicNack(deliveryTag, false, true);
         }
     }
+
+    /**
+     * 消息发送确认监听
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
+    @RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.confirm.queue", durable = "true", ignoreDeclarationExceptions = "true"),
+                    exchange = @Exchange(
+                            value = "niici.confirm.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.TOPIC
+                    ),
+                    key = {"confirm.#"}))
+    @RabbitHandler
+    public void confirmListen(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("消息发送确认监听器到消息: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }
 }

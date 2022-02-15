@@ -1,12 +1,17 @@
 package com.niici.rabbitmq.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * rabbitmq交换机、队列、绑定关系配置类
@@ -14,6 +19,9 @@ import java.util.Map;
  */
 @Configuration
 public class RabbitMqConfig {
+
+    @Resource
+    private RabbitTemplate rabbitTemplate;
     /**
      * 配置fanout交换机
      * ExchangeBuilder提供了fanout、direct、topic类型的交换机配置
@@ -63,6 +71,15 @@ public class RabbitMqConfig {
         // 指定延迟队列的类型
         args.put("x-delayed-type", "topic");
         return new CustomExchange("niici.delay.exchange", "x-delayed-message", true, false, args);
+    }
+
+    /**
+     * 配置消息确认交换机
+     * @return
+     */
+    @Bean
+    public Exchange confirmExchange() {
+        return ExchangeBuilder.topicExchange("niici.confirm.exchange").durable(true).build();
     }
 
     /**
@@ -133,6 +150,15 @@ public class RabbitMqConfig {
     }
 
     /**
+     * 定义一个确认队列，用于测试消息发送确认
+     * @return
+     */
+    @Bean
+    public Queue confirmQueue() {
+        return new Queue("niici.confirm.queue");
+    }
+
+    /**
      * 定义一个延迟队列
      * @return
      */
@@ -170,6 +196,30 @@ public class RabbitMqConfig {
         // 将队列绑定到指定的交换机上, 并指定路由key
         return BindingBuilder.bind(queue).to(exchange).with("delay.#").noargs();
     }
+
+    @Bean
+    public Binding confirmQueueBind(@Qualifier("confirmQueue") Queue queue, @Qualifier("confirmExchange") Exchange exchange) {
+        // 将队列绑定到指定的交换机上, 并指定路由key
+        return BindingBuilder.bind(queue).to(exchange).with("confirm.#").noargs();
+    }
+
+    @PostConstruct
+    public RabbitTemplate configRabbitTemplate() {
+        Logger log = LoggerFactory.getLogger(RabbitTemplate.class);
+        // 设置消息发送确认失败回调, yml需要配合publisher-confirm-type: correlated 使用
+        rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
+            if (!ack) {
+                log.info("发送消息失败回调, error: {}", cause);
+            }
+        });
+        // 设置消息发送失败返回回调, yml需要配合publisher-returns: true 使用
+        rabbitTemplate.setReturnsCallback(returned ->
+                log.info("消息发送失败, 应答码: {}, 原因: {}, 交换机: {}, 路由key: {}",
+                returned.getReplyCode(), returned.getReplyText(), returned.getExchange(), returned.getRoutingKey()));
+        return rabbitTemplate;
+    }
+
+
 }
 
 

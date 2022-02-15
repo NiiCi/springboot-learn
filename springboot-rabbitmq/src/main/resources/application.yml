@@ -21,6 +21,7 @@ spring:
         acknowledge-mode: manual
       simple:
         acknowledge-mode: manual
-    publisher-confirm-type: simple
     # 消息发送失败时，返回到队列
     publisher-returns: true
+    # 发送消息确认，配合rabbitTemplate.setConfirmCallback使用
+    publisher-confirm-type: correlated

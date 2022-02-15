@@ -6,15 +6,21 @@ import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessagePostProcessor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RabbitmqTest {
     @Autowired
     private AmqpTemplate amqpTemplate;
+
+    @Resource
+    private RabbitTemplate rabbitTemplate;
 
     /**
      * 基本消息模型发送消息
@@ -166,5 +172,16 @@ public class RabbitmqTest {
         });
         // 消息发送完成后, 等待10s, 让监听器去监听, 在控制台打印结果
         Thread.sleep(10000);
+    }
+
+    /**
+     * 消息确认回调场景测试
+     */
+    @Test
+    public void confirmTest() {
+        // 消息发送确认失败回调测试
+        rabbitTemplate.convertAndSend("niici.confirm.exchange2", "confirm.nack", "待确认消息发送成功");
+        // 消息发送失败返回回调测试 -- 路由key不存在时, 无法发送成功
+        rabbitTemplate.convertAndSend("niici.confirm.exchange", "confi.nack", "待返回消息发送成功");
     }
 }

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。">
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/img_1.png" afterDir="false" />
+    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。&#10;3. 延迟队列问题：给消息设置超时时间，可能导致消息堆积。&#10;4. 延迟队列问题解决方案：使用rabbitmq_delayed_message_exchange插件。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -330,7 +328,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RabbitmqTest.delay">
+  <component name="RunManager" selected="JUnit.RabbitmqTest.confirmTest">
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -340,11 +338,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitmqTest.dead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitmqTest.confirmTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-rabbitmq" />
       <option name="PACKAGE_NAME" value="com.niici.rabbitmq" />
       <option name="MAIN_CLASS_NAME" value="com.niici.rabbitmq.RabbitmqTest" />
-      <option name="METHOD_NAME" value="dead" />
+      <option name="METHOD_NAME" value="confirmTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -520,9 +518,9 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.RabbitmqTest.topic" />
-      <item itemvalue="JUnit.RabbitmqTest.dead" />
       <item itemvalue="JUnit.RabbitmqTest.deadNack" />
       <item itemvalue="JUnit.RabbitmqTest.deadTTL" />
+      <item itemvalue="JUnit.RabbitmqTest.delay" />
       <item itemvalue="Spring Boot.AspectJApplication (1)" />
       <item itemvalue="Spring Boot.AspectJApplication" />
       <item itemvalue="Spring Boot.DemoApplication" />
@@ -541,15 +539,15 @@
       <item itemvalue="Spring Boot.WebSocketApplicaiton" />
       <item itemvalue="Spring Boot.RabbitmqApplication" />
       <item itemvalue="Spring Boot.SpringbootRabbitmqApplication" />
-      <item itemvalue="JUnit.RabbitmqTest.delay" />
+      <item itemvalue="JUnit.RabbitmqTest.confirmTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RabbitmqTest.confirmTest" />
         <item itemvalue="JUnit.RabbitmqTest.delay" />
         <item itemvalue="JUnit.RabbitmqTest.topic" />
         <item itemvalue="JUnit.RabbitmqTest.deadNack" />
         <item itemvalue="JUnit.RabbitmqTest.deadTTL" />
-        <item itemvalue="JUnit.RabbitmqTest.dead" />
       </list>
     </recent_temporary>
   </component>
@@ -654,7 +652,8 @@
       <workItem from="1644414058902" duration="5285000" />
       <workItem from="1644493060800" duration="1846000" />
       <workItem from="1644495147160" duration="1041000" />
-      <workItem from="1644496210752" duration="5646000" />
+      <workItem from="1644496210752" duration="6503000" />
+      <workItem from="1644924553755" duration="7689000" />
     </task>
     <task id="LOCAL-00001" summary="1. rabbitmq复习，明天继续">
       <created>1644243962909</created>
@@ -691,7 +690,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644496959754</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。&#10;3. 延迟队列问题：给消息设置超时时间，可能导致消息堆积。&#10;4. 延迟队列问题解决方案：使用rabbitmq_delayed_message_exchange插件。">
+      <created>1644501991712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644501991712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -820,7 +826,8 @@
     <MESSAGE value="1. 新增如何设置队列中消息的过期时间&#10;2. 设置死信队列。" />
     <MESSAGE value="1. 新增死信队列场景测试代码。&#10;2. 延迟队列 = 消息超时场景的死信队列" />
     <MESSAGE value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。" />
+    <MESSAGE value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。&#10;3. 延迟队列问题：给消息设置超时时间，可能导致消息堆积。&#10;4. 延迟队列问题解决方案：使用rabbitmq_delayed_message_exchange插件。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。&#10;3. 延迟队列问题：给消息设置超时时间，可能导致消息堆积。&#10;4. 延迟队列问题解决方案：使用rabbitmq_delayed_message_exchange插件。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
