@@ -184,4 +184,47 @@ public class RabbitmqTest {
         // 消息发送失败返回回调测试 -- 路由key不存在时, 无法发送成功
         rabbitTemplate.convertAndSend("niici.confirm.exchange", "confi.nack", "待返回消息发送成功");
     }
+
+    /**
+     * 备份交换机，告警队列测试
+     * 备份交换机的优先级要高于消息回退，即消息发送失败会优先进入备份交换机
+     */
+    @Test
+    public void warnTest() {
+        // 消息发送确认失败回调测试
+        rabbitTemplate.convertAndSend("niici.confirm.exchange2", "confirm.nack", "我来组成尾部");
+        // 消息发送失败返回回调测试 -- 路由key不存在时, 无法发送成功
+        rabbitTemplate.convertAndSend("niici.confirm.exchange", "confi.nack", "我来组成头部");
+    }
+
+    /**
+     * 优先队列测试
+     */
+    @Test
+    public void priorityTest() throws InterruptedException {
+        // 消息设置优先级
+        amqpTemplate.convertAndSend("niici.priority.exchange", "priority.two", "我的优先级是2", message -> {
+            message.getMessageProperties().setPriority(2);
+            return message;
+        });
+        amqpTemplate.convertAndSend("niici.priority.exchange", "priority.five", "我的优先级是5", message -> {
+            message.getMessageProperties().setPriority(5);
+            return message;
+        });
+        amqpTemplate.convertAndSend("niici.priority.exchange", "priority.seven", "我的优先级是7", message -> {
+            message.getMessageProperties().setPriority(7);
+            return message;
+        });
+        amqpTemplate.convertAndSend("niici.priority.exchange", "priority.three", "我的优先级是3", message -> {
+            message.getMessageProperties().setPriority(3);
+            return message;
+        });
+        amqpTemplate.convertAndSend("niici.priority.exchange", "priority.eight", "我的优先级是8", message -> {
+            message.getMessageProperties().setPriority(8);
+            return message;
+        });
+
+        // 消息发送完成后, 等待10s, 让监听器去监听, 在控制台打印结果
+        Thread.sleep(10000);
+    }
 }

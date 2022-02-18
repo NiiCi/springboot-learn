@@ -3,7 +3,6 @@ package com.niici.rabbitmq.config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.*;
-import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -69,8 +68,18 @@ public class RabbitMqConfig {
         // CustomExchange 允许自定义交换机类型
         HashMap<String, Object> args = new HashMap<>();
         // 指定延迟队列的类型
-        args.put("x-delayed-type", "topic");
+        args.put("x-delayed-type", "direct");
         return new CustomExchange("niici.delay.exchange", "x-delayed-message", true, false, args);
+    }
+
+    /**
+     * 配置备份交换机
+     * 备份交换机的类型需要是fanout类型
+     * @return
+     */
+    @Bean
+    public FanoutExchange backupExchange() {
+        return ExchangeBuilder.fanoutExchange("niici.backup.exchange").durable(true).build();
     }
 
     /**
@@ -79,7 +88,20 @@ public class RabbitMqConfig {
      */
     @Bean
     public Exchange confirmExchange() {
-        return ExchangeBuilder.topicExchange("niici.confirm.exchange").durable(true).build();
+        //return ExchangeBuilder.topicExchange("niici.confirm.exchange").durable(true).build();
+        // 消息确认交换机需要将无法投递的消息发送给备份交换机
+        return ExchangeBuilder.topicExchange("niici.confirm.exchange").durable(true)
+                // alternate参数用于指定备份交换机
+                .alternate("niici.backup.exchange").build();
+    }
+
+    /**
+     * 配置优先交换机
+     * @return
+     */
+    @Bean
+    public Exchange priorityExchange() {
+        return ExchangeBuilder.topicExchange("niici.priority.exchange").durable(true).build();
     }
 
     /**
@@ -150,6 +172,15 @@ public class RabbitMqConfig {
     }
 
     /**
+     * 定义一个延迟队列
+     * @return
+     */
+    @Bean
+    public Queue delayQueue() {
+        return new Queue("niici.delay.queue");
+    }
+
+    /**
      * 定义一个确认队列，用于测试消息发送确认
      * @return
      */
@@ -159,12 +190,31 @@ public class RabbitMqConfig {
     }
 
     /**
-     * 定义一个延迟队列
+     * 定义一个备份队列
      * @return
      */
     @Bean
-    public Queue delayQueue() {
-        return new Queue("niici.delay.queue");
+    public Queue backupQueue() {
+        return new Queue("niici.backup.queue");
+    }
+
+    /**
+     * 定义一个告警队列，用于接受备份队列中的消息
+     * @return
+     */
+    @Bean
+    public Queue warnQueue() {
+        return new Queue("niici.warn.queue");
+    }
+
+    /**
+     * 定义一个优先队列
+     * @return
+     */
+    @Bean
+    public Queue priorityQueue() {
+        // maxPriority参数用于设置队列的最大优先级
+        return QueueBuilder.durable("niici.priority.queue").maxPriority(10).build();
     }
 
     @Bean
@@ -203,6 +253,24 @@ public class RabbitMqConfig {
         return BindingBuilder.bind(queue).to(exchange).with("confirm.#").noargs();
     }
 
+    @Bean
+    public Binding backupQueueBind(@Qualifier("backupQueue") Queue queue, @Qualifier("backupExchange") FanoutExchange exchange) {
+        // 将队列绑定到指定的交换机上, 并指定路由key
+        return BindingBuilder.bind(queue).to(exchange);
+    }
+
+    @Bean
+    public Binding warnQueueBind(@Qualifier("warnQueue") Queue queue, @Qualifier("backupExchange") FanoutExchange exchange) {
+        // 将队列绑定到指定的交换机上, 并指定路由key
+        return BindingBuilder.bind(queue).to(exchange);
+    }
+
+    @Bean
+    public Binding priorityQueueBind(@Qualifier("priorityQueue") Queue queue, @Qualifier("priorityExchange") Exchange exchange) {
+        // 将队列绑定到指定的交换机上, 并指定路由key
+        return BindingBuilder.bind(queue).to(exchange).with("priority.#").noargs();
+    }
+
     @PostConstruct
     public RabbitTemplate configRabbitTemplate() {
         Logger log = LoggerFactory.getLogger(RabbitTemplate.class);
@@ -216,6 +284,9 @@ public class RabbitMqConfig {
         rabbitTemplate.setReturnsCallback(returned ->
                 log.info("消息发送失败, 应答码: {}, 原因: {}, 交换机: {}, 路由key: {}",
                 returned.getReplyCode(), returned.getReplyText(), returned.getExchange(), returned.getRoutingKey()));
+
+        // 当消息传递过程中不可达时, 将消息返回给生产者
+        rabbitTemplate.setMandatory(true);
         return rabbitTemplate;
     }
 

@@ -4,6 +4,9 @@ import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.*;
+import org.springframework.amqp.rabbit.connection.RabbitUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -52,7 +55,8 @@ public class Listener {
             exchange = @Exchange(
                     value = "niici.fanout.exchange",
                     ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.FANOUT
+                    type = ExchangeTypes.FANOUT,
+                    declare = "false"
             ),
             key = {"#.#"}))
     public void fanoutListen1(String msg) {
@@ -63,8 +67,9 @@ public class Listener {
             value = @Queue(value = "niici.fanout.queue2", durable = "true"),
             exchange = @Exchange(
                     value = "niici.fanout.exchange",
-                    ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.FANOUT
+                    ignoreDeclarationExceptions = "true ",
+                    type = ExchangeTypes.FANOUT,
+                    declare = "false"
             ),
             key = {"#.#"}))
     public void fanoutListen2(String msg) {
@@ -81,7 +86,8 @@ public class Listener {
             exchange = @Exchange(
                     value = "niici.direct.exchange",
                     ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.DIRECT
+                    type = ExchangeTypes.DIRECT,
+                    declare = "false"
             ),
             key = {"insert"}))
     public void directListen(String msg) {
@@ -93,7 +99,8 @@ public class Listener {
             exchange = @Exchange(
                     value = "niici.direct.exchange",
                     ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.DIRECT
+                    type = ExchangeTypes.DIRECT,
+                    declare = "false"
             ),
             key = {"insert", "delete"}))
     public void directListen2(String msg) {
@@ -106,7 +113,8 @@ public class Listener {
             exchange = @Exchange(
                     value = "niici.topic.exchange",
                     ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.TOPIC
+                    type = ExchangeTypes.TOPIC,
+                    declare = "false"
             ),
             key = {"user.#"}))
     public void topicListen(String msg) {
@@ -119,7 +127,8 @@ public class Listener {
                     exchange = @Exchange(
                             value = "niici.topic.exchange",
                             ignoreDeclarationExceptions = "true",
-                            type = ExchangeTypes.TOPIC
+                            type = ExchangeTypes.TOPIC,
+                            declare = "false"
                     ),
                     key = {"student.#"}))
     @RabbitHandler
@@ -163,7 +172,8 @@ public class Listener {
                     exchange = @Exchange(
                             value = "niici.dead.exchange",
                             ignoreDeclarationExceptions = "true",
-                            type = ExchangeTypes.TOPIC
+                            type = ExchangeTypes.TOPIC,
+                            declare = "false"
                     ),
                     key = {"dead.#"}))
     @RabbitHandler
@@ -193,7 +203,8 @@ public class Listener {
                     exchange = @Exchange(
                 value = "niici.dead.exchange",
                 ignoreDeclarationExceptions = "true",
-                type = ExchangeTypes.TOPIC
+                type = ExchangeTypes.TOPIC,
+                declare = "false"
         ),
         key = {"dead.#"}))
         @RabbitHandler
@@ -213,11 +224,14 @@ public class Listener {
             bindings = @QueueBinding(
                     // niici.topic.queue在config中已经配置, 使用@RabbitListener注解监听时, 会再创建一次queue
                     // 使用ignoreDeclarationExceptions = true 忽略声明异常
-                    value = @Queue(value = "niici.topic.queue", durable = "true", ignoreDeclarationExceptions = "true"),
+                    value = @Queue(value = "niici.topic.queue", durable = "true",
+                            ignoreDeclarationExceptions = "true",
+                            declare = "false"),
                     exchange = @Exchange(
                             value = "niici.topic.exchange",
                             ignoreDeclarationExceptions = "true",
-                            type = ExchangeTypes.TOPIC
+                            type = ExchangeTypes.TOPIC,
+                            declare = "false"
                     ),
                     key = {"topic.nack"}))
     @RabbitHandler
@@ -245,7 +259,8 @@ public class Listener {
                     exchange = @Exchange(
                             value = "niici.dead.exchange",
                             ignoreDeclarationExceptions = "true",
-                            type = ExchangeTypes.TOPIC
+                            type = ExchangeTypes.TOPIC,
+                            declare = "false"
                     ),
                     key = {"dead.#"}))
     @RabbitHandler
@@ -273,7 +288,8 @@ public class Listener {
                     exchange = @Exchange(
                             value = "niici.delay.exchange",
                             ignoreDeclarationExceptions = "true",
-                            type = ExchangeTypes.TOPIC
+                            type = ExchangeTypes.DIRECT,
+                            declare = "false"
                     ),
                     key = {"delay.#"}))
     @RabbitHandler
@@ -301,7 +317,8 @@ public class Listener {
                     exchange = @Exchange(
                             value = "niici.confirm.exchange",
                             ignoreDeclarationExceptions = "true",
-                            type = ExchangeTypes.TOPIC
+                            type = ExchangeTypes.TOPIC,
+                            declare = "false"
                     ),
                     key = {"confirm.#"}))
     @RabbitHandler
@@ -310,6 +327,64 @@ public class Listener {
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
         try {
             System.out.println("消息发送确认监听器到消息: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }
+
+    /**
+     * 备份交换机，告警队列监听
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
+    @RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.warn.queue", durable = "true", ignoreDeclarationExceptions = "true"),
+                    exchange = @Exchange(
+                            value = "niici.backup.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.FANOUT,
+                            declare = "false"
+                    )))
+    @RabbitHandler
+    public void warnListen(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("告警！！！消息发送失败, 消息内容: " + msg);
+            channel.basicAck(deliveryTag, false);
+        } catch (IOException e) {
+            channel.basicNack(deliveryTag, false, true);
+        }
+    }
+
+    /**
+     * 优先队列监听
+     * @param msg
+     * @param channel
+     * @param message
+     * @throws IOException
+     */
+    @RabbitListener(
+            bindings = @QueueBinding(
+                    value = @Queue(value = "niici.priority.queue", durable = "true",
+                            ignoreDeclarationExceptions = "true",
+                            declare = "false"),
+                    exchange = @Exchange(
+                            value = "niici.priority.exchange",
+                            ignoreDeclarationExceptions = "true",
+                            type = ExchangeTypes.TOPIC,
+                            declare = "false"
+                    )))
+    @RabbitHandler
+    public void priorityListen(String msg, Channel channel, Message message) throws IOException {
+        // 消息在队列中对应的索引
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        try {
+            System.out.println("优先队列监听接受到消息, 消息内容: " + msg);
             channel.basicAck(deliveryTag, false);
         } catch (IOException e) {
             channel.basicNack(deliveryTag, false, true);
