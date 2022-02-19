@@ -4,12 +4,85 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 新增发布消息确认机制：消息确认回调和消息返回回调。">
+    <list default="true" id="02d7db00-571d-4ee8-836a-94dc84d55eac" name="Default" comment="1. 新增幂等性解决方案。&#10;2. 新增优先队列，设置队列和消息的优先级。&#10;3. 新增备份交换机，消息确认交换机将无法投递的消息发送给备份交换机。&#10;4. 解决@RabbitmqListener和配置类声明的交换机、队列冲突问题, @RabbitmqListener中@Queue和@Exchange使用declare=&quot;false&quot;,取消自动声明。">
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/Centos7安装rabbitmq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527063872737.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527063976617.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064480681.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064487042.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064606029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064762982.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527064881869.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527065024587.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527065157430.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066149086.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066164552.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066205405.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066255320.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527066694704.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527067075616.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527067448840.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068070427.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068172958.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068230315.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068380737.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527068544487.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527070384668.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527070619131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072505530.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072699034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072746634.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072874080.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527072947108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527073500352.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527078437166.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527085386747.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527085448377.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527085826462.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086103576.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086159534.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086284940.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527086564505.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527087071693.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527087677192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088296131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088518574.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088933255.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088960059.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527088984029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527089338661.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527089365281.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527089407483.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527090258083.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527090414110.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527090513200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527156169187.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527156211012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527164231784.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527164472745.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527164971474.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165003173.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165040632.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165091338.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165112725.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165286619.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165323776.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527165345197.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527166160735.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527166183985.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/1527166202112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/clip_image001-1527067240682.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/clip_image001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/rabbit下载和安装帮助文档.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/assets/安装erlang成功图片.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/erlang-21.3-1.el7.x86_64.rpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/rabbitmq-server-3.4.1-1.noarch.rpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/rabbitmq-server-3.8.8-1.el7.noarch.rpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-rabbitmq/rabbitmq/rabbitmq_delayed_message_exchange-3.8.0.ez" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/config/RabbitMqConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/main/java/com/niici/rabbitmq/listener/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-rabbitmq/src/test/java/com/niici/rabbitmq/RabbitmqTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +364,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.29054725" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -311,6 +384,7 @@
       <recent name="F:\springboot-learn\springboot-security-jwt\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\springboot-learn\springboot-rabbitmq\rabbitmq" />
       <recent name="F:\springboot-learn\docker-learn\docker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -328,7 +402,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RabbitmqTest.delay">
+  <component name="RunManager" selected="Spring Boot.SpringbootRabbitmqApplication">
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -519,6 +593,9 @@
     <list>
       <item itemvalue="JUnit.RabbitmqTest.delay" />
       <item itemvalue="JUnit.RabbitmqTest.confirmTest" />
+      <item itemvalue="JUnit.RabbitmqTest.priorityTest" />
+      <item itemvalue="JUnit.RabbitmqTest.deadNack" />
+      <item itemvalue="JUnit.RabbitmqTest.topic" />
       <item itemvalue="Spring Boot.AspectJApplication (1)" />
       <item itemvalue="Spring Boot.AspectJApplication" />
       <item itemvalue="Spring Boot.DemoApplication" />
@@ -537,17 +614,14 @@
       <item itemvalue="Spring Boot.WebSocketApplicaiton" />
       <item itemvalue="Spring Boot.RabbitmqApplication" />
       <item itemvalue="Spring Boot.SpringbootRabbitmqApplication" />
-      <item itemvalue="JUnit.RabbitmqTest.priorityTest" />
-      <item itemvalue="JUnit.RabbitmqTest.deadNack" />
-      <item itemvalue="JUnit.RabbitmqTest.topic" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RabbitmqTest.priorityTest" />
         <item itemvalue="JUnit.RabbitmqTest.delay" />
         <item itemvalue="JUnit.RabbitmqTest.topic" />
         <item itemvalue="JUnit.RabbitmqTest.deadNack" />
         <item itemvalue="JUnit.RabbitmqTest.confirmTest" />
-        <item itemvalue="JUnit.RabbitmqTest.priorityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -654,7 +728,8 @@
       <workItem from="1644495147160" duration="1041000" />
       <workItem from="1644496210752" duration="6503000" />
       <workItem from="1644924553755" duration="8915000" />
-      <workItem from="1645185310303" duration="10212000" />
+      <workItem from="1645185310303" duration="11876000" />
+      <workItem from="1645279469091" duration="3564000" />
     </task>
     <task id="LOCAL-00001" summary="1. rabbitmq复习，明天继续">
       <created>1644243962909</created>
@@ -705,7 +780,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644933583415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1. 新增幂等性解决方案。&#10;2. 新增优先队列，设置队列和消息的优先级。&#10;3. 新增备份交换机，消息确认交换机将无法投递的消息发送给备份交换机。&#10;4. 解决@RabbitmqListener和配置类声明的交换机、队列冲突问题, @RabbitmqListener中@Queue和@Exchange使用declare=&quot;false&quot;,取消自动声明。">
+      <created>1645195800533</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1645195800533</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -836,7 +918,8 @@
     <MESSAGE value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。" />
     <MESSAGE value="1. 死信队列：消息被拒收场景测试代码。&#10;2. 解决问题：当@RabbitListener绑定的队列已经在config中声明，且配置了一些属性时, 需要使用ignoreDeclarationExceptions = true来忽略声明异常。&#10;   原因：@RabbitListener绑定的队列会去再创建一次, 会抛出异常。&#10;3. 延迟队列问题：给消息设置超时时间，可能导致消息堆积。&#10;4. 延迟队列问题解决方案：使用rabbitmq_delayed_message_exchange插件。" />
     <MESSAGE value="1. 新增发布消息确认机制：消息确认回调和消息返回回调。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 新增发布消息确认机制：消息确认回调和消息返回回调。" />
+    <MESSAGE value="1. 新增幂等性解决方案。&#10;2. 新增优先队列，设置队列和消息的优先级。&#10;3. 新增备份交换机，消息确认交换机将无法投递的消息发送给备份交换机。&#10;4. 解决@RabbitmqListener和配置类声明的交换机、队列冲突问题, @RabbitmqListener中@Queue和@Exchange使用declare=&quot;false&quot;,取消自动声明。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 新增幂等性解决方案。&#10;2. 新增优先队列，设置队列和消息的优先级。&#10;3. 新增备份交换机，消息确认交换机将无法投递的消息发送给备份交换机。&#10;4. 解决@RabbitmqListener和配置类声明的交换机、队列冲突问题, @RabbitmqListener中@Queue和@Exchange使用declare=&quot;false&quot;,取消自动声明。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

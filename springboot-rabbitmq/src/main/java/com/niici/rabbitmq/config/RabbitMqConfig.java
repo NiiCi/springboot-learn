@@ -213,8 +213,21 @@ public class RabbitMqConfig {
      */
     @Bean
     public Queue priorityQueue() {
-        // maxPriority参数用于设置队列的最大优先级
+        // maxPriority参数用于设置队列的最大优先级, 对应参数x-max-priority
         return QueueBuilder.durable("niici.priority.queue").maxPriority(10).build();
+    }
+
+    /**
+     * 定义一个惰性队列
+     * 正常情况下，消息是保存在内存中
+     * 惰性队列场景下，消息是保存在磁盘中
+     * 惰性队列的使用场景：能够支持更长的队列，在消费者下线、宕机或者是维护而关闭而导致长时间内不能消费消息造成的消息堆积时，可以使用惰性队列。
+     * @return
+     */
+    @Bean
+    public Queue lazyQueue() {
+        // maxPriority参数用于设置队列的最大优先级，对应参数x-queue-mode: lazy
+        return QueueBuilder.durable("niici.lazy,queue").lazy().build();
     }
 
     @Bean

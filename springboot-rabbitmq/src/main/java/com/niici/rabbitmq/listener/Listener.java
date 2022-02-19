@@ -363,6 +363,8 @@ public class Listener {
 
     /**
      * 优先队列监听
+     * 测试优先队列，需要先将消息存放在队列中一段时间，再由队列去排序
+     * 即先将监听器注释掉，发送消息，再把监听器打开，运行springboot项目
      * @param msg
      * @param channel
      * @param message
