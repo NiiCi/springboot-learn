@@ -710,3 +710,147 @@ MQ消费者的幂等性的解决一般使用全局ID或者写一个唯一标识�
 
 ### <font color="red">集群搭建</font>
 
+#### 环境准备
+已启动三个节点的rabbitmq-server
+
+#### 搭建流程
+- 修改三个节点的hosts文件
+````shell
+    vim /etc/hosts
+    192.168.18.164 node1
+    192.168.18.165 node2
+    192.168.18.166 node3
+````
+- 确认每个节点的cookie文件相同
+```shell
+    scp /var/lib/rabbitmq/.erlang.cookie root@node2:/var/lib/rabbitmq/.erlang.cookie
+    scp /var/lib/rabbitmq/.erlang.cookie root@node3:/var/lib/rabbitmq/.erlang.cookie
+```
+- 启动 RabbitMQ 服务,顺带启动 Erlang 虚拟机和 RbbitMQ 应用服务(在三台节点上分别执行以
+  下命令)
+```shell
+    rabbitmq-server -detached
+```
+- 在节点2执行
+```shell
+    rabbitmqctl stop_app (rabbitmqctl stop 会将 Erlang 虚拟机关闭, rabbitmqctl stop_app 只关闭 RabbitMQ 服务)
+    rabbitmqctl reset
+    rabbitmqctl join_cluster rabbit@node1
+    rabbitmqctl start_app (只启动应用服务)
+```
+- 在节点3执行
+```shell
+    rabbitmqctl stop_app
+    rabbitmqctl reset
+    rabbitmqctl join_cluster rabbit@node1
+    rabbitmqctl start_app
+```
+- 查看集群状态(例子供参考)
+```shell
+    rabbitmqctl cluster_status
+    [root@node3 ~]# rabbitmqctl cluster_status
+    Cluster status of node rabbit@node3 ...
+    Basics
+    
+    Cluster name: rabbit@node1
+    
+    Disk Nodes
+    
+    rabbit@node1
+    rabbit@node2
+    rabbit@node3
+    
+    Running Nodes
+    
+    rabbit@node1
+    rabbit@node2
+    rabbit@node3
+    
+    Versions
+    
+    rabbit@node1: RabbitMQ 3.8.8 on Erlang 21.3
+    rabbit@node2: RabbitMQ 3.8.8 on Erlang 21.3
+    rabbit@node3: RabbitMQ 3.8.8 on Erlang 21.3
+    
+    Maintenance status
+    
+    Node: rabbit@node1, status: not under maintenance
+    Node: rabbit@node2, status: not under maintenance
+    Node: rabbit@node3, status: not under maintenance
+    
+    Alarms
+    
+    (none)
+    
+    Network Partitions
+    
+    (none)
+    
+    Listeners
+    
+    Node: rabbit@node1, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+    Node: rabbit@node1, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+    Node: rabbit@node1, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+    Node: rabbit@node2, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+    Node: rabbit@node2, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+    Node: rabbit@node2, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+    Node: rabbit@node3, interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI tool communication
+    Node: rabbit@node3, interface: [::], port: 15672, protocol: http, purpose: HTTP API
+    Node: rabbit@node3, interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
+    
+    Feature flags
+    
+    Flag: drop_unroutable_metric, state: enabled
+    Flag: empty_basic_get_metric, state: enabled
+    Flag: implicit_default_bindings, state: enabled
+    Flag: maintenance_mode_status, state: enabled
+    Flag: quorum_queue, state: enabled
+    Flag: virtual_host_metadata, state: enabled
+```
+- 重新设置用户
+```shell
+    rabbitmqctl add_user admin admin
+    rabbitmqctl set_user_tags admin administrator
+    rabbitmqctl set_permissions -p "/" admin ".*" ".*" ".*"
+```
+- 解除集群节点
+```shell
+    rabbitmqctl stop_app
+    rabbitmqctl reset
+    rabbitmqctl start_app
+    rabbitmqctl cluster_status
+    rabbitmqctl forget_cluster_node rabbit@node2(node1 机器上执行)
+    rabbitmqctl forget_cluster_node rabbit@node3(node1 机器上执行)
+```
+
+### <font color="red">镜像队列</font>
+引入镜像队列(Mirror Queue)的机制，可以将队列镜像到集群中的其他 Broker 节点之上，如果集群中
+的一个节点失效了，队列能自动地切换到镜像中的另一个节点上以保证服务的可用性。
+
+
+- 命令行配置方式
+```shell
+    rabbitmqctl set_policy [-p Vhost] Name Pattern Definition [Priority]
+    
+    -p Vhost: 可选参数, 针对指定vhost下的queue进行设置
+    Name: policy的名称
+    Pattern: queue的匹配模式(正则表达式)
+    Definition: 镜像定义, 包括三个部分ha-mode, ha-params, ha-sync-mode
+        ha-mode: 指明镜像队列的模式, 有效值为 all/exactly/nodes
+            all: 表示在集群中所有的节点上进行镜像
+            exactly: 表示在指定个数的节点上进行镜像, 节点的个数由ha-params指定
+            nodes: 表示在指定的节点上进行镜像, 节点名称通过ha-params指定
+        ha-params: ha-mode模式需要用到的参数
+        ha-sync-mode: 进行队列中消息的同步方式, 有效值为automatic和manual
+        priority: 可选参数, policy的优先级        
+```
+
+```shell
+    rabbitmqctl set_policy --priority 0 --apply-to queues mirror_queue "niici.*" '{"ha-mode":"exactly","ha-params":3,"ha-sync-mode":"automatic"}'
+```
+
+#### 执行结果
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+
+### 高可用负载均衡
