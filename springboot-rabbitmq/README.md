@@ -854,3 +854,95 @@ MQ消费者的幂等性的解决一般使用全局ID或者写一个唯一标识�
 ![img_3.png](img_3.png)
 
 ### 高可用负载均衡
+
+### Haproxy + keepalive 实现高可用负载均衡
+
+- Haproxy 实现负载均衡
+
+Haproxy下载地址：
+````http request
+    https://src.fedoraproject.org/repo/pkgs/haproxy/ --本次使用2.5.0版本
+````
+
+安装流程：
+-   安装gcc编译环境
+```shell
+    yum -y install make gcc gcc-c++ openssl-devel
+```
+-   解压源码包
+```shell
+    tar -zxvf haproxy-2.5.0.tar.gz -C /opt/module/
+```
+-   查看内核版本
+```shell
+    uname -r
+```
+-   make && make install
+```shell
+    cd haproxy-2.5.0
+    make TARGET=linux3100
+    make install
+```
+-   将可执行二进制文件拷贝到/usr/sbin目录
+```shell
+    cp -rf /opt/module/haproxy-2.5.0/haproxy /usr/sbin
+```
+-   检查版本
+```shell
+    [root@node1 haproxy-2.5.0]# haproxy -version
+    HAProxy version 2.5.0-f2e0833 2021/11/23 - https://haproxy.org/
+```
+-   创建配置文件(两个节点)
+```shell
+    vim /etc/haproxy/haproxy.cfg
+    
+    global
+      #日志输出配置，所有日志都记录在本机，通过local0输出
+      log 127.0.0.1 local0 info
+      #最大连接数
+      maxconn 10240
+      #以守护进程方式运行
+      daemon
+    
+    defaults
+      #应用全局的日志配置
+      log global
+      mode http
+      #超时配置
+      timeout connect 5000
+      timeout client 5000
+      timeout server 5000
+      timeout check 2000
+    
+    listen http_front #haproxy的客户页面(bind 对应的ip需要修改)
+      bind 192.168.18.165:8888
+      mode http
+      option httplog
+      stats uri /haproxy
+      stats auth admin:123456
+      stats refresh 5s
+      stats enable
+    
+    listen haproxy #负载均衡的名字
+      bind 0.0.0.0:5666 #对外提供的虚拟的端口
+      option tcplog
+      mode tcp
+      #轮询算法
+      balance roundrobin
+      server rabbit1 192.168.18.164:5672 check inter 5000 rise 2 fall 2
+      server rabbit2 192.168.18.165:5672 check inter 5000 rise 2 fall 2
+      server rabbit3 192.168.18.166:5672 check inter 5000 rise 2 fall 2
+```
+-   启动haproxy
+```shell
+    haproxy -f /etc/haproxy/haproxy.cfg
+    lsof -i:8888 # 查看8888端口是否已被监听
+```
+-   访问haproxy
+```shell
+    http://192.168.18.165:8888/haproxy
+```
+![img_4.png](img_4.png)
+
+- keepalived 实现高可用
+
