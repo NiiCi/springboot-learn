@@ -857,7 +857,7 @@ MQ消费者的幂等性的解决一般使用全局ID或者写一个唯一标识�
 
 ### Haproxy + keepalive 实现高可用负载均衡
 
-- Haproxy 实现负载均衡
+#### Haproxy 实现负载均衡
 
 Haproxy下载地址：
 ````http request
@@ -944,5 +944,97 @@ Haproxy下载地址：
 ```
 ![img_4.png](img_4.png)
 
-- keepalived 实现高可用
+#### keepalived 实现高可用
+
+keepalived下载地址：
+````http request
+    https://www.keepalived.org/download.html -- 本次使用2.2.4版本(也可以使用yum安装)
+````
+
+安装流程：
+-   安装gcc编译环境
+```shell
+    yum -y install make gcc gcc-c++ openssl-devel
+```
+-   解压源码包
+```shell
+    tar -zxvf keepalived-2.2.4.tar.gz -C /usr/local/src
+```
+-   构建可执行二进制文件
+```shell
+    cd /usr/local/src/keepalived-2.2.4/
+    # 配置安装目录
+    ./configure --prefix=/usr/local/keepalived
+    make && make install
+```
+-   修改配置文件 -- /usr/local/keepalived/etc/keepalived/keepalived.conf
+```shell
+    global_defs {
+       notification_email {
+         acassen@firewall.loc
+         failover@firewall.loc
+         sysadmin@firewall.loc
+       }
+       notification_email_from Alexandre.Cassen@firewall.loc
+       smtp_server 192.168.200.1
+       smtp_connect_timeout 30
+       router_id LVS_DEVEL
+       vrrp_skip_check_adv_addr
+       vrrp_strict
+       vrrp_garp_interval 0
+       vrrp_gna_interval 0
+    }
+
+    vrrp_script chk_haproxy {
+        script "/etc/keepalived/haproxy_check.sh"
+        interval 2
+        weight -20
+    }
+
+    vrrp_instance VI_1 {
+        state MASTER/BACKUP #主备分别为master和backup
+        interface ens33
+        virtual_router_id 52
+        priority 100
+        advert_int 1
+        nopreempt
+        authentication {
+            auth_type PASS
+            auth_pass 1111
+        }
+        track_script {
+            chk_haproxy
+        }
+        virtual_ipaddress {
+            192.168.18.167
+        }
+    }
+
+```
+
+-   将keepalived配置成linux系统服务
+```shell
+    mkdir -p /etc/keepalived
+    # 拷贝配置文件
+    cp /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/
+    # 拷贝keepalived脚本
+    cp /usr/local/src/keepalived-2.2.4/keepalived/etc/init.d/keepalived /etc/init.d/
+    cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/     
+    # 配置开机自启动
+    chkconfig keepalived on
+```
+
+-   启动服务
+```shell
+    systemctl start keepalived
+```
+
+-   查看状态
+```shell
+    ps aux | grep keepalived
+    [root@node1 init.d]# ps aux | grep keepalived
+    root      20667  0.0  0.0  44112   892 ?        Ss   22:55   0:00 /usr/local/keepalived/sbin/keepalived -D
+    root      20668  0.0  0.0  44112  1320 ?        S    22:55   0:00 /usr/local/keepalived/sbin/keepalived -D
+    root      20983  0.0  0.0 112824   992 pts/0    S+   23:01   0:00 grep --color=auto keepalived
+```
 
